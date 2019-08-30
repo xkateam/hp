@@ -21,6 +21,7 @@ public class LoginController {
 	LoginService loginService;
 	
 	
+	
 	@RequestMapping("/login")
 	 public String login(String username,String password,Model model) {
         Login login=loginService.checkLogin(username, password);
