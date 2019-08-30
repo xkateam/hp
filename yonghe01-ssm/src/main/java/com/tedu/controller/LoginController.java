@@ -32,7 +32,7 @@ public class LoginController {
         }else if(login!=null &(password==null||"".equals(password))){ //姓名正确，但没有输入密码
             model.addAttribute("msg2","请输入密码");
         }else if(login!=null &!(login.getPassword().equals(password))) { //姓名正确，输入密码，但是密码错误
-            model.addAttribute("msg2","密码错误");
+            model.addAttribute("msg2","密码 错误");
 
         }else if (login!=null &login.getPassword().equals(password)){ //姓名密码均正确
         	return "redirect:/door_list";
