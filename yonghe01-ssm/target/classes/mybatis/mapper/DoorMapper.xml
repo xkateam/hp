@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.tedu.dao.DoorMapper">
+	<select id="findAll" resultType="com.tedu.pojo.Door">
+		select * from tb_door
+	</select>
+	
+	<select id="findById" resultType="com.tedu.pojo.Door">
+		select * from tb_door where id = #{id}
+	</select>
+	
+	<update id="editDoor">
+		update tb_door 
+		<set>
+			<if test="name!=null">
+				name = #{name},
+			</if>
+			<if test="tel">
+				tel = #{tel},
+			</if>
+			<if test="addr">
+				addr = #{addr}
+			</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<insert id="addDoor">
+		insert into tb_door (name,tel,addr) values(#{name},#{tel},#{addr})
+	</insert>
+	
+	<delete id="delDoor">
+		delete from tb_door where id = #{id}
+	</delete>
+</mapper>
