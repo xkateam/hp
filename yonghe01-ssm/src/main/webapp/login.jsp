@@ -3,8 +3,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>用户登录</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0"> 
+	<title>登录界面</title>
+    <link href="${pageContext.request.contextPath }/default.css" rel="stylesheet" type="text/css" />
+	<!--必要样式-->
+    <link href="${pageContext.request.contextPath }/styles.css" rel="stylesheet" type="text/css" />
+    <link href="${pageContext.request.contextPath }/demo.css" rel="stylesheet" type="text/css" />
+    <link href="${pageContext.request.contextPath }/loaders.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div style="width:100%;text-align:center">
