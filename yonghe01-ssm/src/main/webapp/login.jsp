@@ -12,9 +12,9 @@
 	<title>登录界面</title>
     <link href="${pageContext.request.contextPath }/default.css" rel="stylesheet" type="text/css" />
 	<!--必要样式-->
-    <link href="${pageContext.request.contextPath }/styles.css" rel="stylesheet" type="text/css" />
-    <link href="${pageContext.request.contextPath }/demo.css" rel="stylesheet" type="text/css" />
-    <link href="${pageContext.request.contextPath }/loaders.css" rel="stylesheet" type="text/css" />
+    <link href="../resources/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="../resources/css/demo.css" rel="stylesheet" type="text/css" />
+    <link href="../resources/css/loaders.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div style="width:100%;text-align:center">
