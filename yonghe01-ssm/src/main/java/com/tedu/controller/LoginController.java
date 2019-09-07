@@ -2,14 +2,21 @@ package com.tedu.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
+import com.tedu.pojo.Account;
 import com.tedu.pojo.Door;
 import com.tedu.pojo.Login;
+import com.tedu.service.AccountService;
 import com.tedu.service.DoorServiceImpl;
 import com.tedu.service.LoginService;
 import com.tedu.service.LoginServiceImpl;
@@ -21,25 +28,40 @@ public class LoginController {
 	LoginService loginService;
 	
 	
+	@RequestMapping("/teacherInfo")
+	 public String teacher() {
+		return"student/teacherInfo";
+	}
 	
-	@RequestMapping("/login")
-	 public String login(String username,String password,Model model) {
-        Login login=loginService.checkLogin(username, password);
-        if(username==null||"".equals(username)){  //没有输入姓名
-            model.addAttribute("msg1","请输入姓名");
-        }else if(login==null||"".trim().equals(login)){ //输入姓名但是姓名错误
-            model.addAttribute("msg1","账户不存在，请先注册");
-            return "login";
-        }else if(login!=null &(password==null||"".equals(password))){ //姓名正确，但没有输入密码
-            model.addAttribute("msg2","请输入密码");
-        }else if(login!=null &!(login.getPassword().equals(password))) { //姓名正确，输入密码，但是密码错误
-            model.addAttribute("msg2","密码 错误");
+	@RequestMapping("/personInfo" )
+	 public String personInfo() {
+		return "student/personInfo";
+	}
+	
+	
+	@RequestMapping(value="/checkAccountInfo",method=RequestMethod.POST)
+	@ResponseBody
+	public Login checkAccoutnInfo(String username,String password,HttpSession session){
+		Login login= null;
+		if(loginService.checkLogin(username,password)!=null){
+			System.out.println("登录成功");
+			login =loginService.checkLogin(username,password);
+			session.setAttribute("current_user", login);
+		}else {
+			System.out.println("密码或者用户名不正确");
+		}
+		return login;
+	}
+	
+	@RequestMapping(value="/success",method=RequestMethod.POST)
+	@ResponseBody
+	public Integer success(String username){
+		return   loginService.checkRole(username);
+    	
+	}
+	
+	
+	
+	}
 
-        }else if (login!=null &login.getPassword().equals(password)){ //姓名密码均正确
-        	return "redirect:/door_list";
-        }
-        return "login";
-        
-    }
 
-}

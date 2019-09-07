@@ -10,11 +10,20 @@ import com.tedu.pojo.Login;
 
 public class LoginServiceImpl implements LoginService {
 	 @Resource
-	    private LoginMapper loginMapper;
-	 @Override
+	 private LoginMapper loginMapper;
+
 	 public Login checkLogin(String username, String password) {
 	        return loginMapper.checkLogin(username, password);
 	    }
+	public Integer checkRole(String username) {
+		// TODO Auto-generated method stub
+		return loginMapper.checkRole(username);
+	}
+	public Login queryInfoByUsername(String username) {
+		Login login = null;
+		
+		return login;
+	}
 	
 
 

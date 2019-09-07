@@ -7,4 +7,14 @@
         select username,password from login where username=#{username} and password=#{password}
     </select>
    
+   <select id="checkRole" resultType="Integer">	
+   select role_id from account a LEFT JOIN login l on a.username= l.username WHERE a.username=#{username}
+   </select>
+   
+   <select id="queryInfoByUserName" resultType="com.tedu.pojo.Login">
+   select * from login
+   <where>
+   username=#{username}
+   </where>
+   </select>
 </mapper>
