@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.tedu.pojo.Door;
 import com.tedu.service.DoorServiceImpl;
-
+//hkhkjhjhjk
 @Controller
 public class DoorController {
 	@Autowired

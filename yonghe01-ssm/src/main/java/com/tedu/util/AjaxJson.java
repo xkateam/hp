@@ -5,7 +5,7 @@ import java.util.Map;
 import com.alibaba.fastjson.JSONObject;
 public class AjaxJson {
 
-	private int code ;// 是否成功
+	private int code ;// 是否成功nmbmnbmbmn
 	private String msg = "操作成功";// 提示信息
 	private Object obj = null;// 其他信息
 	private Map<String, Object> data;// 其他参数
