@@ -25,7 +25,7 @@
 			<li class="tserver-list2">
 				新手服务
 				<p class="animated zoomin">
-					<a href="#">点击可查看使用流程</a>
+					<a href="${pageContext.request.contextPath }/student/testTupian">点击可查看使用流程</a>
 				</p>
 			</li>
 			<li class="tserver-list3">

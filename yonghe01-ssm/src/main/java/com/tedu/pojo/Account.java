@@ -67,11 +67,7 @@ public class Account implements Serializable{
 	public void setAboutMe(String aboutMe) {
 		this.aboutMe = aboutMe;
 	}
-	@Override
-	public String toString() {
-		return "Account [username=" + username + ", real_name=" + real_name + ", gender=" + gender + ", phone=" + phone
-				+ ", address=" + address + ", grade=" + grade + ", aboutMe=" + aboutMe + "]";
-	}
+
 	public Account(String username, String real_name, String gender, String phone, String address,
 			String grade, String aboutMe) {
 		super();
@@ -85,6 +81,13 @@ public class Account implements Serializable{
 	}
 	public Account() {
 		super();
+	}
+
+	@Override
+	public String toString() {
+		return "Account [account_id=" + account_id + ", username=" + username + ", real_name=" + real_name + ", gender="
+				+ gender + ", phone=" + phone + ", address=" + address + ", grade=" + grade + ", aboutMe=" + aboutMe
+				+ "]";
 	}
 	
 	

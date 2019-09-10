@@ -24,6 +24,8 @@ public class DoorController {
 		List<Door> list = doorServiceImpl.findAll();
 		model.addAttribute("doorList", list);
 		return "door_list";
+		
+		
 	}
 	
 	/**
