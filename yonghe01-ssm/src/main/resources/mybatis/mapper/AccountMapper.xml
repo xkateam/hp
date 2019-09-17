@@ -3,10 +3,12 @@
 
 <!-- 设置为IUserDao接口方法提供sql语句配置 -->
 <mapper namespace="com.tedu.dao.AccountMapper">
+   
     <select id="checkLogin" resultType="com.tedu.pojo.Account" >
 
         select account_id,username,real_name,gender,phone,Address,grade,aboutMe from account 
     </select>
+   
    
    <select id="checkRole" resultType="int">	
    select role_id from account a LEFT JOIN login l on a.username= l.username WHERE a.username=#{username}
@@ -19,12 +21,11 @@
    	</where>
    </select>
    <!--测试json传输-->
-    <select id="findAll" resultType="com.tedu.pojo.Account" >
-
+     <!--<select id="findAll" resultType="com.tedu.pojo.Account" >
         select account_id,username,real_name,gender,phone,Address,grade,aboutMe from account 
     </select>
-    
-    
+  -->
+
    <update id="saveAccountInfo" parameterType="com.tedu.pojo.Account" >
    update account set username=#{username},real_name=#{real_name},gender=#{gender},phone=#{phone},address=#{address},grade=#{grade},aboutMe=#{aboutMe} 
  	<where>

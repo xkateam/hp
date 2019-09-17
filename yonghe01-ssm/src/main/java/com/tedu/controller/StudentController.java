@@ -96,7 +96,36 @@ public class StudentController {
 		return j;
 
 	}
+//学生首页控制器课程页面跳转=================================================================
+	
+	@RequestMapping(value="/student/courseInfo")
+	public String courseInfo() {
+		return "student/courseInfo";
+
+		
+}
+	@RequestMapping(value="/student/ChuZhong")
+	public String ChuZhong() {
+		System.out.println("进初中了");
+		return "student/ChuZhong";
+
+		
+}
+	@RequestMapping(value="/student/GaoZhong")
+	public String GaoZhong() {
+		return "student/GaoZhong";
+
+		
+}
+	@RequestMapping(value="/student/DaXue")
+	public String DaXue() {
+		return "student/DaXue";
+
+		
+}
+	
 //初中课程控制器跳转=================================================================
+	
 	@RequestMapping(value="/student/czHuaXue")
 	public String czHuaXue() {
 		return "student/czHuaXue";
