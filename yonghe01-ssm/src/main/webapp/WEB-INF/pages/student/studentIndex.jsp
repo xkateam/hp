@@ -19,7 +19,7 @@
 			<li class="tserver-list1">
 				师资中心
 				<p class="animated zoomin">
-					<a href="${pageContext.request.contextPath }/teacherInfo">为每个学生因材施教，寻找合适的教师资源</a>
+					<a href="${pageContext.request.contextPath }/student/courseInfo">为每个学生因材施教，寻找合适的教师资源</a>
 				</p>
 			</li>
 			<li class="tserver-list2">
