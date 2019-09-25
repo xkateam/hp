@@ -19,6 +19,18 @@ public class CourseServiceImpl implements CourseService {
 		// TODO Auto-generated method stub
 		return courseMapper.findCourseById(course_id);
 	}
+
+	public List<Course> findAllCourse(String grade_description) {
+		// TODO Auto-generated method stub
+		return courseMapper.findAllCourse(grade_description);
+	}
+
+	public Integer getPriceByCourseId(Integer course_id) {
+		// TODO Auto-generated method stub
+		return courseMapper.getPriceByCourseId(course_id);
+	}
+
+	
 	
 
 }

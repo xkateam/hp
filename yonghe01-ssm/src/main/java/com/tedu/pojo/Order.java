@@ -1,84 +1,43 @@
 package com.tedu.pojo;
 
-import java.util.Date;
 
-public class Order {
-	private Integer id;
-	private Integer doorId;
-	private String orderNo;
-	private String orderType;
-	private Integer pnum;
-	private String cashier;
-	private Date orderTime;
-	private Date payTime;
-	private String payType;
-	private Double price;
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public Integer getDoorId() {
-		return doorId;
-	}
-	public void setDoorId(Integer doorId) {
-		this.doorId = doorId;
-	}
-	public String getOrderNo() {
-		return orderNo;
-	}
-	public void setOrderNo(String orderNo) {
-		this.orderNo = orderNo;
-	}
-	public String getOrderType() {
-		return orderType;
-	}
-	public void setOrderType(String orderType) {
-		this.orderType = orderType;
-	}
-	public Integer getPnum() {
-		return pnum;
-	}
-	public void setPnum(Integer pnum) {
-		this.pnum = pnum;
-	}
-	public String getCashier() {
-		return cashier;
-	}
-	public void setCashier(String cashier) {
-		this.cashier = cashier;
-	}
-	public Date getOrderTime() {
-		return orderTime;
-	}
-	public void setOrderTime(Date orderTime) {
-		this.orderTime = orderTime;
-	}
+
+public class Order{
 	
-	public Date getPayTime() {
-		return payTime;
+	private Integer order_id;
+	private String create_time;
+	private Integer course_id;
+	public Integer getOrder_id() {
+		return order_id;
 	}
-	public void setPayTime(Date payTime) {
-		this.payTime = payTime;
+	public void setOrder_id(Integer order_id) {
+		this.order_id = order_id;
 	}
-	public String getPayType() {
-		return payType;
+	public String getCreate_time() {
+		return create_time;
 	}
-	public void setPayType(String payType) {
-		this.payType = payType;
+	public void setCreate_time(String create_time) {
+		this.create_time = create_time;
 	}
-	public Double getPrice() {
-		return price;
+	public Integer getCourse_id() {
+		return course_id;
 	}
-	public void setPrice(Double price) {
-		this.price = price;
+	public void setCourse_id(Integer course_id) {
+		this.course_id = course_id;
+	}
+	public Order(Integer order_id, String create_time, Integer course_id) {
+		super();
+		this.order_id = order_id;
+		this.create_time = create_time;
+		this.course_id = course_id;
+	}
+	public Order() {
+		super();
 	}
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", doorId=" + doorId + ", orderNo=" + orderNo + ", orderType=" + orderType
-				+ ", pnum=" + pnum + ", cashier=" + cashier + ", orderTime=" + orderTime + ", patTime=" + payTime
-				+ ", payType=" + payType + ", price=" + price + "]";
+		return "Order [order_id=" + order_id + ", create_time=" + create_time + ", course_id=" + course_id + "]";
 	}
+	
 	
 }

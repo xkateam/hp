@@ -25,5 +25,14 @@ public class AccountServiceImpl implements AccountService {
 		 accountMapper.saveAccountInfo(account);
 		
 	}
+	public void selectPointByAccountId(Integer account_id) {
+		accountMapper.selectPointByAccountId(account_id);
+		// TODO Auto-generated method stub
+		
+	}
+	public void updatePointCountByUsernameAndPrice(Integer price, String username) {
+		accountMapper.updatePointCountByUsernameAndPrice(price, username);
+		
+	}
 
 }

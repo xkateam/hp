@@ -11,7 +11,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.alibaba.fastjson.parser.deserializer.StringFieldDeserializer;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
 import com.tedu.pojo.Account;
 import com.tedu.pojo.Door;
@@ -59,6 +61,18 @@ public class LoginController {
 		return   loginService.checkRole(username);
     	
 	}
+	
+//	@RequestMapping(value="/user/regist",method=RequestMethod.POST)
+//	public String  regist(){
+//		return "user/regist";
+//	}
+	 @ResponseBody
+	    @RequestMapping(value = "/user/regist")
+	    public ModelAndView regist(){
+	        ModelAndView modelAndView = new ModelAndView();
+	        modelAndView.setViewName("user/regist");
+	        return modelAndView;
+	    }
 	
 	
 	

@@ -32,6 +32,26 @@
  	account_id=#{account_id}
  	</where>
    </update>
-
    
+   <select id="selectPointByAccountId" resultType="int">
+   select point_count from account
+   	<where>
+ 	account_id=#{account_id}
+ 	
+ 	</where>
+   </select>
+   
+<!--使用积分购买课程 -->
+   <update id="updatePointCountByUsernameAndPrice"  >
+   update account set 
+   point_count=point_count-#{price} where username=#{username}
+ 
+   </update>
+   
+   <!--
+<update id="updatePointCountByAccountIdAndPrice">
+	update account
+	set point_count=point_count-#{price} where account_id=#{account_id}</update>
+ -->
+	   
 </mapper>

@@ -39,7 +39,16 @@ a {
     -o-transition: 0.4s;
     transition: 0.4s;
 }
-
+input {
+  -web-kit-appearance:none;
+  -moz-appearance: none;
+  font-size:1.4em;
+height:2.7em;
+border-radius:4px;
+border:1px solid #c8cccf;
+color:#6a6f77;
+outline:0;
+}
 a:hover,
 a:focus {
     color: #CC2121;

@@ -104,6 +104,11 @@ public class StudentController {
 
 		
 }
+	@RequestMapping(value="/student/chongzhi")
+	public String chongzhi() {
+		return "student/chongzhi";
+
+	}
 	@RequestMapping(value="/student/ChuZhong")
 	public String ChuZhong() {
 		System.out.println("进初中了");

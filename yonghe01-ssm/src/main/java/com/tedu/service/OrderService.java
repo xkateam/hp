@@ -1,5 +1,6 @@
 package com.tedu.service;
 
+import java.sql.Date;
 import java.util.List;
 
 import com.tedu.pojo.Order;
@@ -8,27 +9,13 @@ public interface OrderService {
 	/**
 	 * 查询所有订单
 	 */
-	public List<Order> findAll();
+	public List<Order> findAllOrder(String username);
 	
-	/**
-	 * 按id查询订单信息
-	 */
-	public Order findById(Integer id);
-	
+
 	/**
 	 * 新增订单信息
 	 */
-	public int addOrder(Order order);
+	public int addOrder(Integer course_id,String username,String payTime);
 	
-	/**
-	 * 修改订单信息
-	 */
-	public int updateOrder(Order order);
-	
-	/**
-	 * 删除订单信息
-	 * @param id
-	 * @return
-	 */
-	public int deleteOrder(Integer id);
+
 }

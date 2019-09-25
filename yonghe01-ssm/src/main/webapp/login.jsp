@@ -10,7 +10,7 @@
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
-<title>登录界面</title>
+<title>用户登录界面</title>
 <link
 	href="${pageContext.request.contextPath }/resources/css/default.css"
 	rel="stylesheet" type="text/css" />
@@ -27,7 +27,8 @@
 <body>
 	<div class='login'>
 		<div class='login_title'>
-			<span>管理员登录</span>
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			用户登录界面</span>
 		</div>
 
 		<div class='login_fields'>
@@ -69,15 +70,14 @@
 				</div>
 			</div>
 			<div class='login_fields__submit'>
-				<input type='button' value='登录'>
+				<input type='button' value='登录'><br/>
+					<br/><a style="color:#efecec" href=" ${pageContext.request.contextPath }/user/regist">还没有账户？点击注册</a>
+			
 			</div>
-		</div>
-
-		<div class='success'></div>
-		<div class='disclaimer'>
-			<p>欢迎登陆后台管理系统</p>
+			
 		</div>
 	</div>
+	
 	
 	<!-- 跳转认证动画 -->
 	<div class='authent'>
@@ -95,9 +95,11 @@
 	<link
 		href="${pageContext.request.contextPath }/resources/layui/css/layui.css"
 		rel="stylesheet" type="text/css" />
-	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="${pageContext.request.contextPath }/resources/TIM_admin/assets/js/jquery-1.10.2.js"></script>
+	
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath }/resources/js/jquery-ui.min.js"></script>
+		
 	<script type="text/javascript"
 		src='${pageContext.request.contextPath }/resources/js/stopExecutionOnTimeout.js?t=1'></script>
 	<script
@@ -113,6 +115,20 @@
 		src="${pageContext.request.contextPath }/resources/js/jquery.mockjax.js"
 		type="text/javascript"></script>
 	<script type="text/javascript">
+	function regist(){
+	
+
+	        $.ajax(
+	            {
+	                type: "POST",//方法类型
+	                data: data,
+	                url: "${pageContext.request.contextPath }/user/regist"
+	               
+	            });
+
+	}
+	
+
 		/* var ckusername= $("#username").val();
 		var ckpassword= $("#password").val();
 		$.ajax({

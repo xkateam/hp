@@ -10,6 +10,8 @@ public interface AccountService {
 	
 	public Account selectInfoByUsername(String username);
 	public void saveAccountInfo(Account account );
+	public void selectPointByAccountId(Integer account_id);
+	public void updatePointCountByUsernameAndPrice(Integer price,String username);
 }
 
 
