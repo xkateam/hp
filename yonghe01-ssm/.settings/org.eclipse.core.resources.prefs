@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/tedu/controller/StudentController.java=UTF-8
 encoding//src/main/webapp/WEB-INF/pages/student/ChuZhong.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/pages/student/czShuXue.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/pages/student/czYuWen.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/pages/student/integralPay.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/pages/student/test.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/pages/user/User.jsp=UTF-8
+encoding//src/main/webapp/resources/css/integralPay.css=UTF-8

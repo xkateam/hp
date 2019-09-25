@@ -95,7 +95,9 @@
 	<link
 		href="${pageContext.request.contextPath }/resources/layui/css/layui.css"
 		rel="stylesheet" type="text/css" />
-	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
+	<script src="${pageContext.request.contextPath }/resources/TIM_admin/assets/js/jquery-1.10.2.js"></script>
+	
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath }/resources/js/jquery-ui.min.js"></script>
 	<script type="text/javascript"
