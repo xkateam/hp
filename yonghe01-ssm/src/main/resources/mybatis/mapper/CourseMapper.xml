@@ -3,26 +3,41 @@
 
 <!-- 设置为IUserDao接口方法提供sql语句配置 -->
 <mapper namespace="com.tedu.dao.CourseMapper">
-   
-   <!--测试json传输-->
-    <select id="findCourseById" resultType="com.tedu.pojo.Course" >
-SELECT
-	course_id,
-	s.subject_description,
-	grade_description,
-	teacher_name,
-	price,
-	city_name,
-	city_name,
-	teacher_phone,
-	view
-FROM
-	course c
- LEFT JOIN subject s on c.subject_id=s.subject_id
-  where course_id=#{course_id}
-    </select>
-    
-    
 
-   
+	<!--测试json传输 -->
+	<select id="findCourseById" resultType="com.tedu.pojo.Course">
+		SELECT
+		course_id,
+		s.subject_description,
+		grade_description,
+		teacher_name,
+		price,
+		city_name,
+		city_name,
+		teacher_phone,
+		view
+		FROM
+		course c
+		LEFT JOIN subject s on c.subject_id=s.subject_id
+		where course_id=#{course_id}
+	</select>
+
+	<!--测试json传输 -->
+	<select id="findAllCourse" parameterType="String" resultType="com.tedu.pojo.Course">
+		SELECT * FROM course
+		where grade_description = #{grade_description}
+
+	</select>
+
+	
+	<!--通过courseId拿到价格 -->
+	<select id="getPriceByCourseId"  resultType="Integer">
+		SELECT price FROM course
+		where course_id = #{course_id}
+
+	</select>
+	
+	
+
+
 </mapper>

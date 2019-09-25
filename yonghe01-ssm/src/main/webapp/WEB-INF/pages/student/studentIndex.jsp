@@ -31,7 +31,7 @@
 			<li class="tserver-list3">
 				我的订单
 				<p class="animated zoomin">
-					<a href="#">查看已购买的订单详情</a>
+					<a href="${pageContext.request.contextPath }/student/orderList">查看已购买的订单详情</a>
 				</p>
 			</li>
 			<li class="tserver-list4">
@@ -55,7 +55,9 @@
 			<li class="tserver-list7">
 				积分充值
 				<p class="animated zoomin">
+
 					<a href="${pageContext.request.contextPath }/student/integralPay">在此进行积分的充值，可使用支付宝、微信等</a>
+
 				</p>
 			</li>
 		</ul>
