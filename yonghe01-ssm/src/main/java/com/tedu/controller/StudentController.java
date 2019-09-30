@@ -38,20 +38,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class StudentController {
 	@Autowired
 	private AccountService accountService;
-	//登录后返回当前登录用户的个人的信息
+	//鐧诲綍鍚庤繑鍥炲綋鍓嶇櫥褰曠敤鎴风殑涓汉鐨勪俊鎭�
 	@RequestMapping("/student/selectAccountInfo")	
 	@ResponseBody
 	public AjaxJson chaxun2(HttpServletRequest request, HttpServletResponse response, String username) {
 		 
 		AjaxJson j = new AjaxJson();
-		// 学校列表
+		// 瀛︽牎鍒楄〃
 		Account account = accountService.selectInfoByUsername(username);
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("data", account);
 		j.setCode(0);
-		j.setMsg("操作成功!");
+		j.setMsg("鎿嶄綔鎴愬姛!");
 		j.setData(map);
-		System.out.println("进入查询controller了");
+		System.out.println("杩涘叆鏌ヨcontroller浜�");
 		System.out.println(accountService.selectInfoByUsername(username));
 		return j;
 		
@@ -65,7 +65,7 @@ public class StudentController {
 //	@RequestMapping(value="/student/selectAccountInfo",method=RequestMethod.POST)
 //	@ResponseBody
 //	public Account chaxun(String username) {
-//		System.out.println("进入查询controller了");
+//		System.out.println("杩涘叆鏌ヨcontroller浜�");
 //		System.out.println(accountService.selectInfoByUsername(username));
 //		
 //		return accountService.selectInfoByUsername(username);
@@ -84,19 +84,19 @@ public class StudentController {
 		try {
 			accountService.saveAccountInfo(account);
 			j.setCode(0);
-			j.setMsg("操作成功!");
+			j.setMsg("鎿嶄綔鎴愬姛!");
 		} catch (Exception e) {
 			e.printStackTrace();
 			j.setCode(1);
-			j.setMsg("操作失败!");
+			j.setMsg("鎿嶄綔澶辫触!");
 		}
 
-		j.setMsg("操作成功!");
+		j.setMsg("鎿嶄綔鎴愬姛!");
 		
 		return j;
 
 	}
-//学生首页控制器课程页面跳转=================================================================
+//瀛︾敓棣栭〉鎺у埗鍣ㄨ绋嬮〉闈㈣烦杞�=================================================================
 	
 	@RequestMapping(value="/student/courseInfo")
 	public String courseInfo() {
@@ -111,7 +111,7 @@ public class StudentController {
 	}
 	@RequestMapping(value="/student/ChuZhong")
 	public String ChuZhong() {
-		System.out.println("进初中了");
+		System.out.println("杩涘垵涓簡");
 		return "student/ChuZhong";
 
 		
@@ -129,7 +129,7 @@ public class StudentController {
 		
 }
 	
-//初中课程控制器跳转=================================================================
+//鍒濅腑璇剧▼鎺у埗鍣ㄨ烦杞�=================================================================
 	
 	@RequestMapping(value="/student/czHuaXue")
 	public String czHuaXue() {
@@ -158,7 +158,7 @@ public class StudentController {
 		return "student/czYuWen";
 }
 	
-//高中课程控制器跳转=================================================================
+//楂樹腑璇剧▼鎺у埗鍣ㄨ烦杞�=================================================================
 	@RequestMapping(value="/student/gzHuaXue")
 	public String gzHuaXue() {
 		return "student/gzHuaXue";
@@ -186,6 +186,10 @@ public class StudentController {
 		return "student/gzYuWen";
 }	
 	
+	@RequestMapping(value="/student/integralPay")
+	public String integralPay() {
+		return "student/integralPay";
+}	
 
 	
 }

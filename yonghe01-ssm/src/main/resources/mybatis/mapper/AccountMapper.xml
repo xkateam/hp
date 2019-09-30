@@ -53,5 +53,29 @@
 	update account
 	set point_count=point_count-#{price} where account_id=#{account_id}</update>
  -->
-	   
+ 
+ <!-- 查询积分 -->
+ <select id="selectIntegralPayByPhone" parameterType="String" resultType="int">
+ select point_count from account 
+ 	<where>
+ 	phone = #{phone}
+ 	</where>
+ </select>
+ 
+ <!-- 增加积分 -->
+<update id="updateIntegralPayByPhone">
+update account set point_count = #{point_count} where phone = #{phone}
+
+</update>
+
+<!-- 充值订单添加 -->
+<insert id="insertOrder">
+insert into orders(orderId,phone) values(#{orderId},#{phone})
+</insert>
+
+<!-- 充值手机号查询 -->
+<select id="selectPhoneByOrderId" parameterType="String" resultType="String">
+select phone from orders where orderId = #{orderId}
+</select>
+
 </mapper>
