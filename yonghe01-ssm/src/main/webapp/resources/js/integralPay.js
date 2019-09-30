@@ -1,6 +1,6 @@
 $(function () {
 	
-	var money = null;
+//	var money = null;
 	
 	// 充值金额选择与支付方式选择
     $(".label-cell label ").on("click", function(){
@@ -20,7 +20,7 @@ $(function () {
 	    $(".points span").text(val/10+" 积分");
 	    amount.attr("fee", val);
 	    amount.val(val);
-	    money = val;
+//	    money = val;
 
 	});
 
@@ -45,7 +45,7 @@ $(function () {
 		    }
 		    $(".label-option span").text(val);
 		    $(".points span").text(val/10+" 积分");
-		    money = val;
+//		    money = val;
 	    	
 	    });
         
@@ -64,14 +64,7 @@ $(function () {
 
     });
     
-    //支付跳转
-    var phone = parseInt($.trim(".input-account".value));
-    $(".pay").on("click", function(){
-    	
-    	
-    	
-    });
-    
+   
 
     
  

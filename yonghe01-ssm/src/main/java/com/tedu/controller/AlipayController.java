@@ -8,7 +8,6 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-//import org.n3r.idworker.Sid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +20,10 @@ import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.internal.util.AlipaySignature;
 import com.alipay.api.request.AlipayTradePagePayRequest;
+import com.sun.javafx.scene.web.Debugger;
+import com.tedu.org.n3r.idworker.Sid;
+import com.tedu.service.AccountService;
+import com.tedu.service.AccountServiceImpl;
 //import com.sihai.pojo.Orders;
 //import com.sihai.pojo.Product;
 //import com.sihai.service.OrdersService;
@@ -48,14 +51,15 @@ public class AlipayController {
 
 	final static Logger log = LoggerFactory.getLogger(AlipayController.class);
 
-	@Autowired
-	private ProductService productService;
-
-	@Autowired
-	private OrdersService orderService;
-
 //	@Autowired
-//	private Sid sid;
+//	private ProductService productService;
+//
+//	@Autowired
+//	private OrdersService orderService;
+	
+	@Autowired
+	private AccountServiceImpl accountService;
+	
 
 //	/**
 //	 * 获取产品列表
@@ -174,12 +178,20 @@ public class AlipayController {
 	 */
 	@RequestMapping(value = "/goAlipay", produces = "text/html; charset=UTF-8")
 	@ResponseBody
-	public String goAlipay(String orderId, HttpServletRequest request, HttpServletRequest response) throws Exception {
+	public String goAlipay(String phone,String money ,HttpServletRequest request, HttpServletRequest response ) throws Exception {
+		
+		
+		System.out.print("==========================phone:"+phone);
+		System.out.print("==========================money:"+money);
+		Sid sid = new Sid();
+		
+		String orderId = sid.nextShort();
+		
+		System.out.print(orderId);
+		
+		accountService.insertOrder(phone, orderId);
 
-		Orders order = orderService.getOrderById(orderId);
-
-		Product product = productService.getProductById(order.getProductId());
-
+		
 		//获得初始化的AlipayClient
 		AlipayClient alipayClient = new DefaultAlipayClient(AlipayConfig.gatewayUrl, AlipayConfig.app_id, AlipayConfig.merchant_private_key, "json", AlipayConfig.charset, AlipayConfig.alipay_public_key, AlipayConfig.sign_type);
 
@@ -191,11 +203,11 @@ public class AlipayController {
 		//商户订单号，商户网站订单系统中唯一订单号，必填
 		String out_trade_no = orderId;
 		//付款金额，必填
-		String total_amount = order.getOrderAmount();
+		String total_amount = money;
 		//订单名称，必填
-		String subject = product.getName();
+		String subject = "积分";
 		//商品描述，可空
-		String body = "用户订购商品个数：" + order.getBuyCounts();
+		String body = "";
 
 		// 该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天，1c-当天（1c-当天的情况下，无论交易何时创建，都在0点关闭）。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。
     	String timeout_express = "1c";
@@ -248,7 +260,9 @@ public class AlipayController {
 
 		boolean signVerified = AlipaySignature.rsaCheckV1(params, AlipayConfig.alipay_public_key, AlipayConfig.charset, AlipayConfig.sign_type); //调用SDK验证签名
 
-		ModelAndView mv = new ModelAndView("alipaySuccess");
+		System.out.print("====================================signVerified:"+signVerified);
+		
+		ModelAndView mv = new ModelAndView("student/alipaySuccess");
 		//——请在这里编写您的程序（以下代码仅作参考）——
 		if(signVerified) {
 			//商户订单号
@@ -261,24 +275,33 @@ public class AlipayController {
 			String total_amount = new String(request.getParameter("total_amount").getBytes("ISO-8859-1"),"UTF-8");
 
 			// 修改叮当状态，改为 支付成功，已付款; 同时新增支付流水
-			orderService.updateOrderStatus(out_trade_no, trade_no, total_amount);
-
-
-			Orders order = orderService.getOrderById(out_trade_no);
-			Product product = productService.getProductById(order.getProductId());
+//			orderService.updateOrderStatus(out_trade_no, trade_no, total_amount);
+//
+//			Orders order = orderService.getOrderById(out_trade_no);
+//			
+//			Product product = productService.getProductById(order.getProductId());
+			System.out.print("====================total_amount:"+total_amount);
+			
+		 	String a =  total_amount.substring(0, total_amount.indexOf("."));
+			
+			Integer point_count = Integer.parseInt(a)/10;
+			
+			String phone = accountService.selectPhoneByOrderId(out_trade_no);
+			
+			accountService.updateIntegralPayByPhone(phone,point_count);
 
 			log.info("********************** 支付成功(支付宝同步通知) **********************");
     		log.info("* 订单号: {}", out_trade_no);
     		log.info("* 支付宝交易号: {}", trade_no);
     		log.info("* 实付金额: {}", total_amount);
-    		log.info("* 购买产品: {}", product.getName());
+    		log.info("* 购买产品: {}", "积分");
     		log.info("***************************************************************");
 
 
     		mv.addObject("out_trade_no", out_trade_no);
     		mv.addObject("trade_no", trade_no);
     		mv.addObject("total_amount", total_amount);
-    		mv.addObject("productName", product.getName());
+    		mv.addObject("productName", "积分");
 
 		}else {
 			log.info("支付, 验签失败...");
@@ -323,6 +346,7 @@ public class AlipayController {
 
 		boolean signVerified = AlipaySignature.rsaCheckV1(params, AlipayConfig.alipay_public_key, AlipayConfig.charset, AlipayConfig.sign_type); //调用SDK验证签名
 
+		
 		//——请在这里编写您的程序（以下代码仅作参考）——
 		
 		/* 实际验证过程建议商户务必添加以下校验：
@@ -360,16 +384,16 @@ public class AlipayController {
 				//付款完成后，支付宝系统发送该交易状态通知
 
 				// 修改叮当状态，改为 支付成功，已付款; 同时新增支付流水
-				orderService.updateOrderStatus(out_trade_no, trade_no, total_amount);
-
-				Orders order = orderService.getOrderById(out_trade_no);
-				Product product = productService.getProductById(order.getProductId());
+//				orderService.updateOrderStatus(out_trade_no, trade_no, total_amount);
+//
+//				Orders order = orderService.getOrderById(out_trade_no);
+//				Product product = productService.getProductById(order.getProductId());
 
 				log.info("********************** 支付成功(支付宝异步通知) **********************");
 	    		log.info("* 订单号: {}", out_trade_no);
 	    		log.info("* 支付宝交易号: {}", trade_no);
 	    		log.info("* 实付金额: {}", total_amount);
-	    		log.info("* 购买产品: {}", product.getName());
+	    		log.info("* 购买产品: {}", "积分");
 	    		log.info("***************************************************************");
 			}
 			log.info("支付成功...");

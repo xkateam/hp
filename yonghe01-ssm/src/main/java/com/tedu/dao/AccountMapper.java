@@ -13,6 +13,9 @@ public interface AccountMapper {
 	public void saveAccountInfo(Account account);
 	public  void selectPointByAccountId(Integer account_id); 
 	public void updatePointCountByUsernameAndPrice(@Param("price")Integer price,@Param("username")String username);
-	
+	public int selectIntegralPayByPhone(String phone);
+	public void updateIntegralPayByPhone(@Param("phone")String phone,@Param("point_count")Integer point_count);
+	public void insertOrder(@Param("phone")String phone,@Param("orderId")String orderId);
+	public String selectPhoneByOrderId(String orderId);
 	
 }

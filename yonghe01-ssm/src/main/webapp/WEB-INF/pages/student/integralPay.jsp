@@ -45,7 +45,7 @@
                     </div> <div class="pay-wrap">
                         <!-- 网银充值 start -->
                         <div class="pay-panel pay-ebank">
-                         <form method="post" name="pay-ebank" id="pay-ebank" action="/p.php">
+                         <form method="post" name="pay-ebank" id="pay-ebank" action="${pageContext.request.contextPath}/alipay/goAlipay">
 	                    <input type="hidden" name="__EVENTTARGET" value="" />
 						<input type="hidden" name="__EVENTARGUMENT" value="" />
 						<input name="act" type="hidden" id="act" size="25" value="wxpay"> 
@@ -58,7 +58,7 @@
                                     <label class="label-title">您充值的账号：</label>
                                     <div class="label-item">
                                         <div class="form-item">
-                                            <input autocomplete="off" isok="1"  jslog-trace-id="onlinegiantpayaccount" class="input-account" type="text" id="account_jr" value="" placeholder="请输入手机账号 / 个性账号" />
+                                            <input name="phone" autocomplete="off" isok="1"  jslog-trace-id="onlinegiantpayaccount" class="input-account" type="text" id="account_jr" value="" placeholder="请输入手机账号" />
                                         </div>
                                     </div>
                                 </li>
@@ -73,7 +73,7 @@
                                         </div> 
                                         <div class="custom clearfix">
                                             <div class="form-item form-small">
-                                                <input autocomplete="off" class="input-amount-qrcode" jslog-trace-id="onlinegiantpayinputfee" pattern="\d*" type="text" id="fee_jr" fee="0" placeholder="其他金额" data-min="1" data-max="100000" maxlength="6" />
+                                                <input name="money" autocomplete="off" class="input-amount-qrcode" jslog-trace-id="onlinegiantpayinputfee" pattern="\d*" type="text" id="fee_jr" fee="0" placeholder="其他金额" data-min="1" data-max="100000" maxlength="6" />
                                             </div>
                                             <p>元（10元 = <span class="points_base" id="points_base1">1</span> 积分）</p>
                                             <p class="induction" style="display:none"></p>
@@ -99,11 +99,66 @@
                                  </li>
                                                                    <li class="clearfix">
                                      <div class="label-option">
-                                         <a class="pay" id="btn-ebank" jslog-trace-id="onlinegiantpaysubmit">立即支付（<span>0</span>.00元）</a>
+                                         <button type="submit" class="pay" id="btn-ebank" jslog-trace-id="onlinegiantpaysubmit">立即支付（<span>0</span>.00元）</button>
                                      </div>
                                  </li>
                              </ul>
                              
-
+</form>
 </body>
+<script type="text/javascript">
+
+$(function(){
+	
+    init();
+    
+});
+function init(){
+		var username = "${current_user.username}";
+		console.log(username);
+		
+	$.ajax({
+		url:'${pageContext.request.contextPath}/student/selectAccountInfo',
+		cache: false,
+		async: false,
+		type:'POST',
+		data:{'username':username},
+		
+		success:function(data){
+			console.log(data);
+		
+			var phone = data.data.data.phone;
+
+			$("#account_jr").attr("value", phone);
+			
+			
+		}
+		
+		
+	});
+}
+//支付跳转
+
+/* $(".pay").on("click", function(){
+	var phone = document.getElementById("account_jr").value;
+	var money = document.getElementById("fee_jr").value;
+	$.ajax({
+		type:'POST',
+		url:'${pageContext.request.contextPath}/alipay/goAlipay.action',
+		data:{
+			'phone':phone,
+			'money':money,
+			},
+		
+		success:function(data){
+			
+		}
+		
+		
+	});
+	
+}); */
+
+
+</script>
 </html>   

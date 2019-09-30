@@ -34,5 +34,22 @@ public class AccountServiceImpl implements AccountService {
 		accountMapper.updatePointCountByUsernameAndPrice(price, username);
 		
 	}
+	public int selectIntegralPayByPhone(String phone) {
+		// TODO Auto-generated method stub
+		return accountMapper.selectIntegralPayByPhone(phone);
+	}
+	public void updateIntegralPayByPhone(String phone, Integer point_count) {
+		// TODO Auto-generated method stub
+		Integer point = selectIntegralPayByPhone(phone)+point_count;
+		accountMapper.updateIntegralPayByPhone(phone, point);
+	}
+	public void insertOrder(String phone, String orderId) {
+		// TODO Auto-generated method stub
+		accountMapper.insertOrder(phone, orderId);
+	}
+	public String selectPhoneByOrderId(String orderId) {
+		// TODO Auto-generated method stub
+		return accountMapper.selectPhoneByOrderId(orderId);
+	}
 
 }
