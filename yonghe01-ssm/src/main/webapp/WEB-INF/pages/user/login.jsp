@@ -10,7 +10,7 @@
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
-<title>登录界面</title>
+<title>用户登录界面</title>
 <link
 	href="${pageContext.request.contextPath }/resources/css/default.css"
 	rel="stylesheet" type="text/css" />
@@ -23,6 +23,75 @@
 <link
 	href="${pageContext.request.contextPath }/resources/css/loaders.css"
 	rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class='login'>
+		<div class='login_title'>
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			用户登录界面</span>
+		</div>
+
+		<div class='login_fields'>
+			<form action="${pageContext.request.contextPath }/login"
+				method="post">
+				<div class='login_fields__user'>
+					<div class='icon'>
+						<img alt=""
+							src='${pageContext.request.contextPath }/resources/img/user_icon_copy.png'>
+					</div>
+					<input name="username" id="username" placeholder='用户名' maxlength="16" type='text' />
+					<%-- <span>${msg1}</span> --%>
+					<div class='validation'>
+						<img alt=""
+							src='${pageContext.request.contextPath }/resources/img/tick.png'>
+					</div>
+				</div>
+				<div class='login_fields__password'>
+					<div class='icon'>
+						<img alt=""
+							src='${pageContext.request.contextPath }/resources/img/lock_icon_copy.png'>
+					</div>
+					<input name="password" id="password" placeholder='密码' maxlength="16" type='text'>
+					<%-- <span>${msg2}</span><br> --%>
+					<div class='validation'>
+						<img alt="" src='${pageContext.request.contextPath }/resources/img/tick.png'>
+					</div>
+				</div>
+			</form>
+			<div class='login_fields__password'>
+				<div class='icon'>
+					<img alt=""
+						src='${pageContext.request.contextPath }/resources/img/key.png'>
+				</div>
+				<input name="code" placeholder='验证码' maxlength="4" type='text'
+					name="ValidateNum" autocomplete="off">
+				<div class='validation' style="opacity: 1; right: -5px; top: -3px;">
+					<canvas class="J_codeimg" id="myCanvas" onclick="Code();">对不起，您的浏览器不支持canvas，请下载最新版浏览器!</canvas>
+				</div>
+			</div>
+			<div class='login_fields__submit'>
+				<input type='button' value='登录'><br/>
+					<br/><a style="color:#efecec" href=" ${pageContext.request.contextPath }/user/regist">还没有账户？点击注册</a>
+			
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	<!-- 跳转认证动画 -->
+	<div class='authent'>
+		<div class="loader"
+			style="height: 44px; width: 44px; margin-left: 28px;">
+			<div class="loader-inner ball-clip-rotate-multiple">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<p>认证中...</p>
+	</div>
+	<div class="OverWindows"></div>
 	<link
 		href="${pageContext.request.contextPath }/resources/layui/css/layui.css"
 		rel="stylesheet" type="text/css" />
@@ -45,164 +114,21 @@
 	<script
 		src="${pageContext.request.contextPath }/resources/js/jquery.mockjax.js"
 		type="text/javascript"></script>
-	
-</head>
-<body>
-	<div class='login'>
-		<div class='login_title'>
-			<span>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户快速注册界面</span>
-		</div>
-
-		<div class='login_fields'>
-			<%--注册表单开始============================================================================================ --%>
-			<form action="${pageContext.request.contextPath }/login"
-				method="post">
-				<%--用户名============================================================================================ --%>
-				<div class='login_fields__user'>
-					<div class='icon'>
-						<img alt=""
-							src='${pageContext.request.contextPath }/resources/img/user_icon_copy.png'>
-					</div>
-					<input name="username" id="username" placeholder='用户名' maxlength="16" type='text' />
-					<%-- <span>${msg1}</span> --%>
-					<div class='validation'>
-						<img alt=""
-							src='${pageContext.request.contextPath }/resources/img/tick.png'>
-					</div>
-				</div>
-				<%--密码============================================================================================ --%>
-				<div class='login_fields__password'>
-					<div class='icon'>
-						<img alt=""
-							src='${pageContext.request.contextPath }/resources/img/lock_icon_copy.png'>
-					</div>
-					<input name="password" id="password" placeholder='密码' maxlength="16" type='text'>
-					<%-- <span>${msg2}</span><br> --%>
-					<div class='validation'>
-						<img alt="" src='${pageContext.request.contextPath }/resources/img/tick.png'>
-					</div>
-				</div>
-			<%--手机号============================================================================================ --%>
-			<div class='login_fields__user'>
-					<div class='icon'>
-						<img alt=""
-							src='${pageContext.request.contextPath }/resources/img/lock_icon_copy.png'>
-					</div>
-					<input name="phone" id="phone" placeholder='手机号' maxlength="16" type='text'>
-					<%-- <span>${msg2}</span><br> --%>
-					<div class='validation'>
-						<img alt="" src='${pageContext.request.contextPath }/resources/img/tick.png'>
-					</div>
-
-					
-				</div>
-				
-				<div class='login_fields__password'>
-				<div class='icon'>
-						<img alt=""
-							src='${pageContext.request.contextPath }/resources/img/user_icon_copy.png'>
-					</div>
-				<label><input type="radio" name="role" value="1" style="margin-left:53px">我是学生</label>
-				<label><input type="radio" name="role" value="2">我是老师</label>
-
-
-				</div>
-			<%--表单结束============================================================================================ --%>
-				</form>	
-			
-			<div class='login_fields__submit'>
-			<br>
-			<input type="button" style="margin-left:45px;" value='点击进行注册' id="put" onclick="regist()">
-			</div>
-			
-			</div>
-			
-			
-			<script>
-			$("#put").click(function(){
-				var username = $("#username").val();
-				var password = $("#password").val();
-				var phone = $("phone").val();
-				var role= $("input[type='radio']:checked").val();
-				var data ={
-				"username":username,
-				"password":password,
-				"phone":phone,
-				"role":role
-				};
-				console.log(data);
-			});
-			</script>
-			
-			</div>
-			
-		</div>
-	
-	
-	</div>
-		<script type="text/javascript">
-	
+	<script type="text/javascript">
 	function regist(){
-
-		var username = $("#username").val();
-		var password = $("#password").val();
-		var phone = $("phone").val();
-		var role= $("input[type='radio']:checked").val();
-		var data ={
-		"username":username,
-		"password":password,
-		"phone":phone,
-		"role":role
-		};
+	
 
 	        $.ajax(
 	            {
 	                type: "POST",//方法类型
 	                data: data,
-	                url: "${pageContext.request.contextPath }/user/addAccount",
-	                success : function(data){
-	                		alert("注册成功！！！")
-	                		 window.location.href="${pageContext.request.contextPath }/login"; 
-	              
-	
-	                		  }
+	                url: "${pageContext.request.contextPath }/user/regist"
 	               
 	            });
 
 	}
 	
-	//粒子背景特效
-	$('body').particleground({
-		dotColor : '#E8DFE8',
-		lineColor : '#133b88'
-	});
-	$('input[name="password"]').focus(function() {
-		$(this).attr('type', 'password');
-	});
-	$('input[type="text"]').focus(function() {
-		$(this).prev().animate({
-			'opacity' : '1'
-		}, 200);
-	});
-	$('input[type="text"],input[type="password"]').blur(function() {
-		$(this).prev().animate({
-			'opacity' : '.5'
-		}, 200);
-	});
-	$('input[name="username"],input[name="password"]').keyup(function() {
-		var Len = $(this).val().length;
-		if (!$(this).val() == '' && Len >= 5) {
-			$(this).next().animate({
-				'opacity' : '1',
-				'right' : '30'
-			}, 200);
-		} else {
-			$(this).next().animate({
-				'opacity' : '0',
-				'right' : '20'
-			}, 200);
-		}
-	});
+
 		/* var ckusername= $("#username").val();
 		var ckpassword= $("#password").val();
 		$.ajax({
@@ -298,7 +224,7 @@
 			}); */
 			//非空验证
 			/* 当按下回车键，或者点击登录按钮时，触发此事件 */
-			$('input[type="submit"]').click(
+			$('input[type="button"]').click(
 					function() {
 						var username = $('input[name="username"]').val();
 						var password = $('input[name="password"]').val();

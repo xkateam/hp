@@ -7,6 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-高中！！！
+<div class="row cl">
+    <label class="form-label col-xs-4 col-sm-2">
+        <span class="c-red">*</span> 头像：
+    </label>  
+     &nbsp;&nbsp;&nbsp;&nbsp;
+     <img id="pic3" src="" width="106" alt="">
+    <input type='file' style="width: 200px;" name='picPaths3'id='picPaths3'           
+    onchange="showPic(this, 3);" />  
+</div>
+
 </body>
 </html>

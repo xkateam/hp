@@ -17,4 +17,14 @@
    username=#{username}
    </where>
    </select>
+   
+   <insert id="addAccount" >
+   insert  into  account  (username,phone,role_id) values (#{username},#{phone},#{role})
+
+   </insert>
+   
+    <insert id="addLogin" >
+   insert  into  login  (username,password) values (#{username},#{password})
+
+   </insert>
 </mapper>
