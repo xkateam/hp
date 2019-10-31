@@ -11,16 +11,14 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="32x32">
     <!-- All CSS -->
-    <link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-4.2.1.css">
-    <link rel="stylesheet" href="assets/css/aos.min.css">
-    <link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.7.0.css">
-    <link rel="stylesheet" href="assets/css/magnific.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/select2.min.css">
-    <link rel="stylesheet" href="assets/css/slimmenu.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/aos.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/magnific.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/select2.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/slimmenu.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/style.css">
     <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
 </head>
    <body>
       <!--header-start -->
@@ -29,7 +27,7 @@
             <div class="row">
                <div class="col-lg-2">
                   <div class="logo">
-                     <a href="index.html"><img src="resources/teacher/assets/images/logo.png" alt="image" /></a>
+                     <a href="index.html"><img src="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/images/logo.png" alt="image" /></a>
                   </div>
                </div>
                <div class="col-lg-10">
@@ -150,7 +148,7 @@
                      <div class="col-md-4">
                         <div class="work-block" data-aos="fade-up">
                            <div class="icon">
-                              <a href="#"><img src="assets/images/lock.png" alt="image" /></a>
+                              <a href="#"><img src="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/images/lock.png" alt="image" /></a>
                            </div>
                            <div class="title">
                               <h3>Create Account</h3>
@@ -161,7 +159,7 @@
                      <div class="col-md-4">
                         <div class="work-block">
                            <div class="icon">
-                              <a href="#"><img src="assets/images/search.png" alt="image" /></a>
+                              <a href="#"><img src="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/images/search.png" alt="image" /></a>
                            </div>
                            <div class="title">
                               <h3>Serach Job</h3>
@@ -172,7 +170,7 @@
                      <div class="col-md-4">
                         <div class="work-block m-0">
                            <div class="icon">
-                              <a href="#"><img src="resources/teacher/assets/images/resume.png" alt="image" /></a>
+                              <a href="#"><img src="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/images/resume.png" alt="image" /></a>
                            </div>
                            <div class="title">
                               <h3>Submit Resume</h3>
@@ -202,7 +200,7 @@
                      <div class="job-post-list">
                         <div class="single-job d-md-flex" data-aos="fade-left">
                            <div class="logo">
-                              <a href="job-post.html"><img src="resources/teacher/assets/images/logo-2.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/images/logo-2.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -222,7 +220,7 @@
                         </div>
                         <div class="single-job  d-md-flex" data-aos="fade-right">
                            <div class="logo">
-                              <a href="job-post.html"><img src="resources/teacher/assets/images/logo-3.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-3.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -242,7 +240,7 @@
                         </div>
                         <div class="single-job  d-md-flex" data-aos="fade-left">
                            <div class="logo">
-                              <a href="job-post.html"><img src="resources/teacher/assets/images/logo-4.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-4.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -262,7 +260,7 @@
                         </div>
                         <div class="single-job d-md-flex" data-aos="fade-right">
                            <div class="logo">
-                              <a href="job-post.html"><img src="resources/teacher/assets/images/logo-5.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-5.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -286,7 +284,7 @@
                      <div class="job-post-list">
                         <div class="single-job  d-md-flex" data-aos="fade-left">
                            <div class="logo">
-                              <a href="job-post.html"><img src="resources/teacher/assets/images/logo-6.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-6.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -306,7 +304,7 @@
                         </div>
                         <div class="single-job d-md-flex" data-aos="fade-right">
                            <div class="logo">
-                              <a href="job-post.html"><img src="resources/teacher/assets/images/logo-7.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-7.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -326,7 +324,7 @@
                         </div>
                         <div class="single-job  d-md-flex" data-aos="fade-left">
                            <div class="logo">
-                              <a href="job-post.html"><img src="resources/teacher/assets/images/logo-8.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-8.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -346,7 +344,7 @@
                         </div>
                         <div class="single-job d-md-flex" data-aos="fade-left">
                            <div class="logo">
-                              <a href="job-post.html"><img src="resources/teacher/assets/images/logo-5.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/logo-5.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -388,17 +386,17 @@
                         <p>   Eu scelerisque felis imperdiet proin fermentum. Odio pellentesque diam volutpat commodo sed. At elementum eu facilisis sed odio morbi quis commodo odio.</p>
                         <div class="apps-btn d-md-flex">
                            <a href="#">
-                              <img src="resources/teacher/assets/images/Google-Play.png" alt="image" />
+                              <img src="${pageContext.request.contextPath }resources/teacher/assets/images/Google-Play.png" alt="image" />
                            </a>
                            <a href="#">
-                              <img src="resources/teacher/assets/images/App-Store.png" alt="image" />
+                              <img src="${pageContext.request.contextPath }resources/teacher/assets/images/App-Store.png" alt="image" />
                            </a>
                         </div>
                      </div>
                   </div>
                   <div class="col-md-4 d-flex align-items-center themeix-h offset-md-1">
                      <div class="mobile themeix-h" data-aos="fade-up-left">
-                        <img src="resources/teacher/assets/images/mobile-img.png" alt="image" />
+                        <img src="${pageContext.request.contextPath }resources/teacher/assets/images/mobile-img.png" alt="image" />
                      </div>
                   </div>
                </div>
@@ -406,7 +404,7 @@
          </div>
          <!--apps-download-area-end -->
          <!--job-browse-area-start -->
-         <div class="job-browse-area pt-100 pb-100 clearfix" style="background-image:url(resources/teacher/assets/images/bg-2.jpg)">
+         <div class="job-browse-area pt-100 pb-100 clearfix" style="background-image:url(${pageContext.request.contextPath }resources/teacher/assets/images/bg-2.jpg)">
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
@@ -440,7 +438,7 @@
                   <div class="row">
                      <div class="col-md-4">
                         <div class="single-category text-center" data-aos="flip-up">
-                           <div class="cat-icon"><a href="#"><img src="resources/teacher/assets/images/cat-1.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-1.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Accounting / finance</a><span>(10 open vacancies)</span></h4>
                            </div>
@@ -448,7 +446,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center">
-                           <div class="cat-icon"><a href="#"><img src="resources/teacher/assets/images/cat-2.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-2.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Education training</a><span>(15 open vacancies)</span></h4>
                            </div>
@@ -456,7 +454,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center" data-aos="flip-up">
-                           <div class="cat-icon"><a href="#"><img src="resources/teacher/assets/images/cat-3.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-3.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Book services </a><span>(17 open vacancies)</span></h4>
                            </div>
@@ -464,7 +462,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center">
-                           <div class="cat-icon"><a href="#"><img src="resources/teacher/assets/images/cat-4.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-4.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Health care</a><span>(9 open vacancies)</span></h4>
                            </div>
@@ -472,7 +470,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center" >
-                           <div class="cat-icon"><a href="#"><img src="resources/teacher/assets/images/cat-5.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-5.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Automotive job</a><span>(6 open vacancies)</span></h4>
                            </div>
@@ -480,7 +478,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center">
-                           <div class="cat-icon"><a href="#"><img src="resources/teacher/assets/images/cat-6.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-6.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Sales  marketing</a><span>(12 open vacancies)</span></h4>
                            </div>
@@ -488,7 +486,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center" data-aos="flip-up">
-                           <div class="cat-icon"><a href="#"><img src="resources/teacher/assets/images/cat-7.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-7.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Sales  marketing</a><span>(12 open vacancies)</span></h4>
                            </div>
@@ -496,7 +494,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center">
-                           <div class="cat-icon"><a href="#"><img src="resources/teacher/assets/images/cat-8.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-8.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Sales  marketing</a><span>(12 open vacancies)</span></h4>
                            </div>
@@ -504,7 +502,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center" data-aos="flip-up">
-                           <div class="cat-icon"><a href="#"><img src="resources/teacher/assets/images/cat-9.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-9.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Sales  marketing</a><span>(12 open vacancies)</span></h4>
                            </div>
@@ -535,14 +533,14 @@
                               <p>Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper viverra nam libero justo laoreet sit amet cursus sit amet dictum sit amet justo donec enim diam vulputate ut pharetra</p>
                            </blockquote>
                            <div class="arrow-down"></div>
-                           <p class="testimonial-author"><img src="resources/teacher/assets/images/testimonial-2.png" alt="image" /> Neil Roberts | <span>Designer</span></p>
+                           <p class="testimonial-author"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/testimonial-2.png" alt="image" /> Neil Roberts | <span>Designer</span></p>
                         </div>
                         <div class="testi-stories  text-left">
                            <blockquote class="testimonial">
                               <p>Mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac auctor augue mauris augue neque gravida in fermentum et sollicitudin ac orci phasellus egestas tellu</p>
                            </blockquote>
                            <div class="arrow-down"></div>
-                           <p class="testimonial-author"><img src="resources/teacher/assets/images/testimonial-1.png" alt="image" /> Jhon Doe | <span>Photgrapher</span></p>
+                           <p class="testimonial-author"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/testimonial-1.png" alt="image" /> Jhon Doe | <span>Photgrapher</span></p>
                         </div>
                      </div>
                   </div>
@@ -567,7 +565,7 @@
                      <div class="col-md-4">
                         <div class="team-reviewer" data-aos="fade-up">
                            <div class="image">
-                              <a href="#"><img src="resources/teacher/assets/images/team-img.jpg" alt="image" /></a>
+                              <a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/team-img.jpg" alt="image" /></a>
 							   <ul class="team-social list-inline">
 								  <li class="facebook"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
 								  <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -599,7 +597,7 @@
                      </div>  <div class="col-md-4">
                         <div class="team-reviewer" data-aos="fade-up">
                            <div class="image">
-                              <a href="#"><img src="resources/teacher/assets/images/team-img2.jpg" alt="image" /></a>
+                              <a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/team-img2.jpg" alt="image" /></a>
 							   <ul class="team-social list-inline">
 								  <li class="facebook"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
 								  <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -630,7 +628,7 @@
                      </div>  <div class="col-md-4">
                         <div class="team-reviewer" data-aos="fade-up">
                            <div class="image">
-                              <a href="#"><img src="resources/teacher/assets/images/team-img3.jpg" alt="image" /></a>
+                              <a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/team-img3.jpg" alt="image" /></a>
 							   <ul class="team-social list-inline">
 								  <li class="facebook"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
 								  <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -674,7 +672,7 @@
 				     	<div class="col-md-6">
 						    <div class="video-support mb-4">
 							   <div class="video-icon">
-							        <img src="resources/teacher/assets/images/home.png" alt="video support icon" />
+							        <img src="${pageContext.request.contextPath }resources/teacher/assets/images/home.png" alt="video support icon" />
 							   </div>
 							   <div class="video-content">
 							        <h5>Putting your first</h5>
@@ -684,7 +682,7 @@
 						</div><div class="col-md-6">
 						    <div class="video-support mb-4">
 							   <div class="video-icon">
-							        <img src="resources/teacher/assets/images/settings.png" alt="video support icon" />
+							        <img src="${pageContext.request.contextPath }resources/teacher/assets/images/settings.png" alt="video support icon" />
 							   </div>
 							   <div class="video-content">
 							        <h5>Customer Satisfaction</h5>
@@ -694,7 +692,7 @@
 						</div><div class="col-md-6">
 						    <div class="video-support">
 							   <div class="video-icon">
-							        <img src="resources/teacher/assets/images/smartphone.png" alt="video support icon" />
+							        <img src="${pageContext.request.contextPath }resources/teacher/assets/images/smartphone.png" alt="video support icon" />
 							   </div>
 							   <div class="video-content">
 							        <h5>Everyone Access</h5>
@@ -704,7 +702,7 @@
 						</div><div class="col-md-6">
 						    <div class="video-support">
 							   <div class="video-icon">
-							        <img src="resources/teacher/assets/images/clock.png" alt="video support icon" />
+							        <img src="${pageContext.request.contextPath }resources/teacher/assets/images/clock.png" alt="video support icon" />
 							   </div>
 							   <div class="video-content">
 							        <h5>Real Time Tracking</h5>
@@ -717,7 +715,7 @@
 				  
 				  </div>
                   <div class="col-lg-5 video-right align-self-stretch ">
-				     <img src="resources/teacher/assets/images/video-bg.jpg" alt="video image" />
+				     <img src="${pageContext.request.contextPath }resources/teacher/assets/images/video-bg.jpg" alt="video image" />
                      <div class="video-content text-center">
                         <a href="https://www.youtube.com/watch?v=O33uuBh6nXA" class="video-play vid-zone buttonfx curtainup" data-aos="zoom-in">
                         <i class="fa fa-play"></i>
@@ -746,7 +744,7 @@
                         <div class="blog-block" data-aos="fade-in">
                            <div class="blog-img">
                               <div class="image-div">
-                                 <img src="resources/teacher/assets/images/blog-img-1.png" alt="image" />
+                                 <img src="${pageContext.request.contextPath }resources/teacher/assets/images/blog-img-1.png" alt="image" />
                                  <div class="blog-overlay">
                                     <p><a href="blog-details.html"><i class="fa fa-link" aria-hidden="true"></i></a></p>
                                  </div>
@@ -770,7 +768,7 @@
                         <div class="blog-block" data-aos="fade-in">
                            <div class="blog-img">
                               <div class="image-div">
-                                 <img src="resources/teacher/assets/images/blog-img-2.png" alt="image" />
+                                 <img src="${pageContext.request.contextPath }resources/teacher/assets/images/blog-img-2.png" alt="image" />
                                  <div class="blog-overlay">
                                     <p><a href="blog-details.html"><i class="fa fa-link" aria-hidden="true"></i></a></p>
                                  </div>
@@ -794,7 +792,7 @@
                         <div class="blog-block" data-aos="fade-in">
                            <div class="blog-img">
                               <div class="image-div">
-                                 <img src="resources/teacher/assets/images/blog-img-3.png" alt="image" />
+                                 <img src="${pageContext.request.contextPath }resources/teacher/assets/images/blog-img-3.png" alt="image" />
                                  <div class="blog-overlay">
                                     <p><a href="blog-details.html"><i class="fa fa-link" aria-hidden="true"></i></a></p>
                                  </div>
@@ -825,7 +823,7 @@
                <div class="row">
                   <div class="col-lg-8">
                      <div class="client-logo">
-                        <a href="#"><img src="resources/teacher/assets/images/company-logo.png" alt="image" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/company-logo.png" alt="image" /></a>
                      </div>
                   </div>
                   <div class="col-lg-4 d-flex align-items-center justify-content-center">
@@ -849,7 +847,7 @@
                   <div class="col-lg-3 col-md-3 col-sm-6">
                      <div class="footer-widget">
                         <div class="widget-title">
-                           <a href="index.html"><img src="resources/teacher/assets/images/footer-logo.png" alt="image" /></a>
+                           <a href="index.html"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/footer-logo.png" alt="image" /></a>
                         </div>
                         <p>Cras semper auctor neque vitae tempus quam pellentesque nec nam aliquam sem et tortor consequat id porta nibh venenatis cras sed felis eget  </p>
                         <div class="social-link mt-4">
@@ -934,17 +932,17 @@
       <!-- ====================ALL JS FILE HERE===================================== -->
       <!-- jQuery -->
 	  <script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
-	  <script src="resources/teacher/assets/js/modules/bootstrap.min.js"></script>
-	  <script src="resources/teacher/assets/js/modules/proper.js"></script>
-	  <script src="resources/teacher/assets/js/modules/jquery.waypoints.min.js"></script>
-	  <script src="resources/teacher/assets/js/modules/owl.carousel.min.js"></script>
-	  <script src="resources/teacher/assets/js/modules/magnific.min.js"></script>
-	  <script src="resources/teacher/assets/js/modules/typing.min.js"></script>
-	  <script src="resources/teacher/assets/js/modules/select2.min.js"></script>
-	  <script src="resources/teacher/assets/js/modules/aos.min.js"></script>
-	  <script src="resources/teacher/assets/js/modules/slimmenu.min.js"></script>
+	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/bootstrap.min.js"></script>
+	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/proper.js"></script>
+	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/jquery.waypoints.min.js"></script>
+	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/owl.carousel.min.js"></script>
+	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/magnific.min.js"></script>
+	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/typing.min.js"></script>
+	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/select2.min.js"></script>
+	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/aos.min.js"></script>
+	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/slimmenu.min.js"></script>
 	  
-      <script src="resources/teacher/assets/js/app.js"></script>  
+      <script src="${pageContext.request.contextPath }resources/teacher/assets/js/app.js"></script>  
       <script>
 	    /*  Type js  */
 		if((".typed").length > 0) {
