@@ -37,13 +37,13 @@
 			<li class="tserver-list4">
 				招聘信息发布
 				<p class="animated zoomin">
-					<a href="#">在此处您可以根据需求生成您的招聘需求，教师会根据个人条件选择是否应聘</a>
+					<a href="${pageContext.request.contextPath }/student/fbzp">在此处您可以根据需求生成您的招聘需求，教师会根据个人条件选择是否应聘</a>
 				</p>
 			</li>
 			<li class="tserver-list5">
 				客服中心
 				<p class="animated zoomin">
-					<a href="#">在此处会有专门的客服人员为你进行一对一的问题解答</a>
+					<a href="${pageContext.request.contextPath }/student/kefu">在此处会有专门的客服人员为你进行一对一的问题解答</a>
 				</p>
 			</li>
 			<li class="tserver-list6">

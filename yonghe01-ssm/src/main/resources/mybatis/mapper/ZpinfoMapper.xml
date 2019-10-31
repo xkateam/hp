@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tedu.dao.ZpinfoMapper">
+  
+    <insert id="insertzpinfo">
+
+
+ INSERT INTO zpinfo (subject_id,grade_id,teacher_name,price,city_name,start_time,finish_time)
+VALUES (#{subject_id},#{grade_id},#{teacher_name},#{price},#{city_name},#{start_time},#{finish_time})
+    </insert>
+    
+    
+</mapper>

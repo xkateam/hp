@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.tedu.dao.AccountMapper;
 import com.tedu.dao.CourseMapper;
 import com.tedu.dao.DoorMapper;
@@ -28,6 +30,15 @@ public class CourseServiceImpl implements CourseService {
 	public Integer getPriceByCourseId(Integer course_id) {
 		// TODO Auto-generated method stub
 		return courseMapper.getPriceByCourseId(course_id);
+	}
+
+	public PageInfo<Course> selectRoleList(Integer pageNum, Integer pageSize, String grade_description) {
+		// TODO Auto-generated method stub
+		PageHelper.startPage(pageNum, pageSize);
+		List<Course> list = courseMapper.findAllCourse(grade_description);
+		PageInfo<Course> pageInfo = new PageInfo<Course>(list);
+		return pageInfo;
+
 	}
 
 	

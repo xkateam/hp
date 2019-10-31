@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body>	
 <div class="row cl">
     <label class="form-label col-xs-4 col-sm-2">
         <span class="c-red">*</span> 头像：

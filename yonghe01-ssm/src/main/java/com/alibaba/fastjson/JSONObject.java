@@ -98,6 +98,7 @@ public class JSONObject extends JSON implements Map<String, Object>, JSONAware, 
     public Object get(Object key) {
         return map.get(key);
     }
+    
 
     public JSONObject getJSONObject(String key) {
         Object value = map.get(key);

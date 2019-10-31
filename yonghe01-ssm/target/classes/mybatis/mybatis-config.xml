@@ -5,10 +5,10 @@
     
     <configuration>
     <!-- 用于输出日志 log4j:LOG4J SLF4J -->
-  <properties>  
+<!--   <properties>  
         <property name="dialect" value="mysql" />  
     </properties>  
     <settings>  
         <setting name="logImpl" value="LOG4J" />    
-    </settings>  
+    </settings>   -->
     </configuration>

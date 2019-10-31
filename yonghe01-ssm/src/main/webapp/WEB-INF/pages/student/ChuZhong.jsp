@@ -9,6 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="meta description">
 <title>Home</title>
+      <link rel="stylesheet" href="css/calendar.css">
 
 <!--=== Favicon ===-->
 <link rel="shortcut icon"
@@ -16,6 +17,8 @@
 	type="image/x-icon" />
 
 <!-- All Vendor & plugins CSS include -->
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath }/resources/calender/css/dateTime.css">
 <link
 	href="${pageContext.request.contextPath }/resources/course/kemu/css/vendor.css"
 	rel="stylesheet">
@@ -23,7 +26,7 @@
 <link
 	href="${pageContext.request.contextPath }/resources/course/kemu/css/style.css"
 	rel="stylesheet">
-
+</head>
 <!--[if lt IE 9]>
 <script src="/oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="/oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -32,91 +35,98 @@
 	src="${pageContext.request.contextPath }/resources/js/jquery-2.1.1.min.js"></script>
 <script
 	src="${pageContext.request.contextPath }/resources/js/request.js"></script>
-</head>
+
 <script type="text/javascript">
 	//此处是获取当前时间转成数据库中的datatime格式
-	
+
 	var account_id = null;
 	var username = "${current_user.username}";
-	$(function() {
+	$(
+			function() {
 
-		init();
-		$(".get_div_id")
-				.on(
-						"click",
-						function() {
-							var current_shop_id = this.parentNode.parentNode.parentNode.parentNode.id;
-							alert("课程ID" + current_shop_id);
-							$(".to_pay")
-									.on(
-											"click",
-											function() {
-												alert("购买")
-												$
-														.ajax({
+				init();
+				$(".get_div_id")
+						.on(
+								"click",
+								function() {
+									var current_shop_id = this.parentNode.parentNode.parentNode.parentNode.id;
+									alert("课程ID" + current_shop_id);
+									$(".to_pay")
+											.on(
+													"click",
+													function() {
+														alert("购买")
+														$
+																.ajax({
 
-															url : '${pageContext.request.contextPath}/course/payPoint',
-															type : 'POST',
-															cache : false,
-															dataType : "json",
-															
-															async : false,
-															data : {
-																'course_id' : current_shop_id,
-															
-																'username' : username
-															},
+																	url : '${pageContext.request.contextPath}/course/payPoint',
+																	type : 'POST',
+																	cache : false,
+																	dataType : "json",
 
-															success : function(data) {
-																console.log("message="+data)
-																//if(data.message=="购买成功"){
-																	// window.location.href("${pageContext.request.contextPath}/student/success")
-															//	}
-																//else
-																	//window.location.href("${pageContext.request.contextPath}/student/fail")
-												
+																	async : false,
+																	data : {
+																		'course_id' : current_shop_id,
 
-															}
-														});
-											})
+																		'username' : username
+																	},
 
-						});
-		function init() {
-			var grade_description = '初中';
-			var getCourse_id = null;
-			$
-					.ajax({
-						url : '${pageContext.request.contextPath}/course/findAllCourse',
-						cache : false,
-						async : false,
-						type : 'POST',
-						data : {
-							'grade_description' : grade_description
-						},
+																	success : function(
+																			data) {
+																		console
+																				.log("message="
+																						+ data)
+																		//if(data.message=="购买成功"){
+																		// window.location.href("${pageContext.request.contextPath}/student/success")
+																		//	}
+																		//else
+																		//window.location.href("${pageContext.request.contextPath}/student/fail")
 
-						success : function(data) {
+																	}
+																});
+													})
 
-							console.log(data);
+								});
+				function init() {
+					var grade_description = '初中';
+					var getCourse_id = null;
+					$
+							.ajax({
+								url : '${pageContext.request.contextPath}/course/findAllCourse',
+								cache : false,
+								async : false,
+								type : 'POST',
+								data : {
+									'grade_description' : grade_description
+								},
 
-							var array = data.data.data;
+								success : function(data) {
 
-							for (var i = 0; i < array.length; i++) {
-								$("#course_id" + (i + 1)).attr("value",
-										array[i].course_id);
-								$("#course_price" + (i + 1)).attr("value",
-										array[i].price);
-								$("#course_teacher_name" + (i + 1)).attr(
-										"value", array[i].teacher_name);
-								$("#course_teacher_phone" + (i + 1)).attr(
-										"value", array[i].teacher_phone);
-							}
+									console.log(data);
 
-						}
+									var array = data.data.data;
 
-					});
-		}
-	})
+									for (var i = 0; i < array.length; i++) {
+										$("#course_id" + (i + 1)).attr("value",
+												array[i].course_id);
+										$("#course_price" + (i + 1)).attr(
+												"value", array[i].price);
+										$("#course_teacher_name" + (i + 1))
+												.attr("value",
+														array[i].teacher_name);
+										$("#course_teacher_phone" + (i + 1))
+												.attr("value",
+														array[i].teacher_phone);
+									}
+
+								}
+
+							});
+				}
+			})
 </script>
+
+
 <body>
 
 
@@ -367,9 +377,10 @@
 					<div class="product-item mt-40">
 						<figure class="product-thumb">
 							<a href="product-details.html"> <img class="pri-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-11.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/cahxls.jpg"
+					
 								alt="product"> <img class="sec-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-12.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/cahx.jpeg"
 								alt="product">
 							</a>
 							<div class="product-badge">
@@ -419,6 +430,7 @@
 							</a>
 							<div class="product-badge">
 								<div class="product-label new">
+								
 									<span>new</span>
 								</div>
 								<div class="product-label discount">
@@ -954,7 +966,22 @@
 							</div>
 							<div class="col-lg-7 col-md-7">
 								<div class="product-details-des quick-details">
-									<h3 class="product-name">Orchid flower white stick</h3>
+									<h3 class="product-name">选择您的上课时间</h3>
+									<!-- layui -->
+
+									<form class="layui-form">
+									
+    						<div id="calendar" class="calendar"></div>
+
+																
+									
+									<button class="layui-btn" lay-submit lay-filter="submit">提交</button>
+									</form>
+									<script>	
+									
+									</script>
+
+
 
 									<div class="price-box">
 										<span class="price-regular">$70.00</span> <span
@@ -1114,5 +1141,10 @@
 	<script
 		src="${pageContext.request.contextPath }/resources/course/kemu/js/active.js"></script>
 </body>
+ <script src="${pageContext.request.contextPath }/resources/layui/lay/modules/laydate.js"></script>
 
+<script
+	src="${pageContext.request.contextPath }/resources/layui_1/layui.js"></script>
+ 
+  
 </html>

@@ -7,7 +7,6 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.websocket.Session;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -104,6 +103,13 @@ public class StudentController {
 
 		
 }
+	
+	@RequestMapping(value="/student/kefu")
+	public String kefu() {
+		return "student/kefu";
+
+		
+}
 	@RequestMapping(value="/student/chongzhi")
 	public String chongzhi() {
 		return "student/chongzhi";
@@ -130,6 +136,13 @@ public class StudentController {
 }
 	
 //鍒濅腑璇剧▼鎺у埗鍣ㄨ烦杞�=================================================================
+//	
+	
+
+	@RequestMapping(value="/student/fbzp")
+	public String fbzp() {
+		return "student/fbzp";
+}
 	
 	@RequestMapping(value="/student/czHuaXue")
 	public String czHuaXue() {
