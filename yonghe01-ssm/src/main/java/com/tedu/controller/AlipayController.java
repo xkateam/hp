@@ -172,8 +172,8 @@ public class AlipayController {
 	 * Copyright: Copyright (c) 2017
 	 * Company:FURUIBOKE.SCIENCE.AND.TECHNOLOGY
 	 *
-	 * @author sihai
-	 * @date 2017年8月23日 下午8:50:43
+	 * @author gongxiangning
+	 * @date 2019年10月23日 下午8:50:43
 	 * @version V1.0
 	 */
 	@RequestMapping(value = "/goAlipay", produces = "text/html; charset=UTF-8")
@@ -188,10 +188,7 @@ public class AlipayController {
 		String orderId = sid.nextShort();
 		
 		System.out.print(orderId);
-		
 		accountService.insertOrder(phone, orderId);
-
-		
 		//获得初始化的AlipayClient
 		AlipayClient alipayClient = new DefaultAlipayClient(AlipayConfig.gatewayUrl, AlipayConfig.app_id, AlipayConfig.merchant_private_key, "json", AlipayConfig.charset, AlipayConfig.alipay_public_key, AlipayConfig.sign_type);
 

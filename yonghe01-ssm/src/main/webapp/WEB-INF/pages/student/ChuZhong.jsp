@@ -50,12 +50,12 @@
 								"click",
 								function() {
 									var current_shop_id = this.parentNode.parentNode.parentNode.parentNode.id;
-									alert("课程ID" + current_shop_id);
+							/* 		alert("课程ID" + current_shop_id); */
 									$(".to_pay")
 											.on(
 													"click",
 													function() {
-														alert("购买")
+														/* alert("购买") */
 														$
 																.ajax({
 
@@ -81,7 +81,7 @@
 																		//	}
 																		//else
 																		//window.location.href("${pageContext.request.contextPath}/student/fail")
-
+																		alert("您已购买成功，可以在我的订单进行查看")
 																	}
 																});
 													})
@@ -203,9 +203,11 @@
 						<figure class="product-thumb">
 							<a href="product-details.html"> <img name="course1_img1"
 								class="pri-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-3.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czhx.jpeg"
+							
 								alt="product"> <img name="course1_img2" class="sec-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-4.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/cahxls.jpg"
+							
 								alt="product">
 							</a>
 							<div class="product-badge">
@@ -245,11 +247,12 @@
 					<div class="product-item mt-40">
 						<figure class="product-thumb">
 							<a href="product-details.html"> <img class="pri-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-5.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czsx.png"
 								alt="product"> <img class="sec-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-6.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czsxls.jpg"
 								alt="product">
 							</a>
+
 							<div class="product-badge">
 								<div class="product-label new">
 									<span>new</span>
@@ -287,10 +290,11 @@
 					<div class="product-item mt-40">
 						<figure class="product-thumb">
 							<a href="product-details.html"> <img class="pri-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-7.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czwl.jpg"
 								alt="product"> <img class="sec-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-8.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czwlls.jpg"
 								alt="product">
+
 							</a>
 							<div class="product-badge">
 								<div class="product-label new">
@@ -332,10 +336,11 @@
 					<div class="product-item mt-40">
 						<figure class="product-thumb">
 							<a href="product-details.html"> <img class="pri-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-9.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czwl.jpg"
 								alt="product"> <img class="sec-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-10.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czyyls.jpg"
 								alt="product">
+
 							</a>
 							<div class="product-badge">
 								<div class="product-label new">
@@ -377,12 +382,13 @@
 					<div class="product-item mt-40">
 						<figure class="product-thumb">
 							<a href="product-details.html"> <img class="pri-img"
-								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/cahxls.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czhx.jpeg"
 					
 								alt="product"> <img class="sec-img"
-								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/cahx.jpeg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czsxls.jpg"
 								alt="product">
 							</a>
+
 							<div class="product-badge">
 								<div class="product-label new">
 									<span>new</span>
@@ -423,11 +429,12 @@
 					<div class="product-item mt-40">
 						<figure class="product-thumb">
 							<a href="product-details.html"> <img class="pri-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-2.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czsx.png"
 								alt="product"> <img class="sec-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-1.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czywls.jpg"
 								alt="product">
 							</a>
+
 							<div class="product-badge">
 								<div class="product-label new">
 								
@@ -469,11 +476,12 @@
 					<div class="product-item mt-40">
 						<figure class="product-thumb">
 							<a href="product-details.html"> <img class="pri-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-4.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/cahxls.jpg"
 								alt="product"> <img class="sec-img"
-								src="${pageContext.request.contextPath }/resources/course/kemu/img/product/product-3.jpg"
+								src="${pageContext.request.contextPath }/resources/teacher/czCourseImg/czsx.png"
 								alt="product">
 							</a>
+
 							<div class="product-badge">
 								<div class="product-label discount">
 									<span>10%</span>

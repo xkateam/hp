@@ -118,11 +118,27 @@
             <section class="features-area features-mt pb-140">
                 <div class="container">
                     <div class="row no-gutters">
+                    
+                     <div class="col-lg-4 col-md-6">
+                            <div class="single-features green" style="padding-left:200px;">
+                                <div class="features-icon mb-25">
+                                    <img src="${pageContext.request.contextPath }/resources/course/assets/img/icon/features_icon03.png" alt="icon">
+                                </div>
+                                <div class="features-content">
+                                    <h4>教师风云榜</h4>
+                                    <p>可在此查看教师的热度，以及课程的热度对比图</p>
+                                    <div class="features-more">
+                                        <a href="${pageContext.request.contextPath }/student/DaXue">Read more <i class="arrow_right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="single-features">
                                 <div class="features-icon mb-25">
                                     <img src="${pageContext.request.contextPath }/resources/course/assets/img/icon/features_icon01.png" alt="icon">
                                 </div>
+                                
                                 <div class="features-content">
                                     <h4>初中板块</h4>
                                     <p>设有初中语文、初中数学、初中英语、初中生物、初中物理、初中化学</p>
