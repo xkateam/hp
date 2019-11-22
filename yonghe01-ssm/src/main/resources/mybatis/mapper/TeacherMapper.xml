@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IUserDao接口方法提供sql语句配置 -->
+<mapper namespace="com.tedu.dao.TeacherMapper">
+
+	<select id="selectTeacherInfoByusername" resultType="com.tedu.pojo.Teacher">
+		select teacher_name,age,gender,phone,email,aboutMe,city_id,teacherGrade from teacher where username = #{username}
+	</select>
+	<update id="updateTeacherInfoByusername">
+		update teacher set teacher_name=#{teacher_name},age=#{age},gender=#{gender},phone=#{phone},email=#{email},aboutMe=#{aboutMe},city_id=#{city_id},teacherGrade=#{teacherGrade} where username = #{username}
+	</update>
+	
+	<insert id="insertJobExpect">
+	   insert into application(username,jobname,jobcat,jobDescription,sallary,joblocation) values(#{username},#{jobname},#{jobcat},#{jobDescription},#{sallary},#{joblocation})
+	
+	</insert>
+	<select id="selectZhaopin" resultType="com.tedu.pojo.Zhaopin">
+		select className,create_time,salary,username,phone from zhaopin 
+		<where>
+			<if test="classLevel != null and classLevel !=''">
+				classLevel = #{classLevel}
+			</if>
+			
+			<if test="classInfo != null and classInfo !=''">
+				and classInfo = #{classInfo}
+			</if>
+			<if test="className != null and className !=''">
+				and className like "%"#{className}"%"
+			</if>
+		</where>
+	</select>
+</mapper>

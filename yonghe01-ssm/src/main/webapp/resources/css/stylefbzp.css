@@ -89,7 +89,7 @@ body {
 }
 
 .selector li input + label:hover {
-  background: #f0f0f0;
+  background: #4fbbe9;
 }
 
 .selector li input:checked + label{

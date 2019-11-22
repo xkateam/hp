@@ -82,6 +82,20 @@
 						<img alt="" src='${pageContext.request.contextPath }/resources/img/tick.png'>
 					</div>
 				</div>
+				
+				<%--密码============================================================================================ --%>
+				<div class='login_fields__password' style="width:100px;">
+					<div class='icon'>
+						<img alt=""
+							src='${pageContext.request.contextPath }/resources/img/lock_icon_copy.png'>
+					</div>
+					<input name="password" id="password1" placeholder='再次输入' maxlength="16" type='text'>
+					<%-- <span>${msg2}</span><br> --%>
+					<div class='validation'>
+						<img alt="" src='${pageContext.request.contextPath }/resources/img/tick.png'>
+					</div>
+				</div>
+				
 			<%--手机号============================================================================================ --%>
 			<div class='login_fields__user'>
 					<div class='icon'>

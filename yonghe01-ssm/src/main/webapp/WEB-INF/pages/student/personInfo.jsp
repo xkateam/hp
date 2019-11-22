@@ -111,8 +111,7 @@
 										</h4>
 									</div>
 									<p class="description text-center">
-										"I like the way you work it <br> No diggity <br> I
-										wanna bag it up"
+										我要好好学习天天向上
 									</p>
 								</div>
 								<hr>
@@ -120,20 +119,20 @@
 									<div class="row">
 										<div class="col-md-3 col-md-offset-1">
 											<h5>
-												12<br />
-												<small>Files</small>
+												8400<br />
+												<small>积分</small>
 											</h5>
 										</div>
 										<div class="col-md-4">
 											<h5>
-												2GB<br />
-												<small>Used</small>
+												23<br />
+												<small>年龄</small>
 											</h5>
 										</div>
 										<div class="col-md-3">
 											<h5>
-												24,6$<br />
-												<small>Spent</small>
+												1434343433<br />
+												<small>手机号</small>
 											</h5>
 										</div>
 									</div>
@@ -222,14 +221,14 @@
 
 											<div class="col-md-3">
 												<div class="form-group">
-													<label>username</label> <input type="text" id="username"
+													<label>用户名</label> <input type="text" id="username"
 														name="username" class="form-control border-input"
 														placeholder="Username">
 												</div>
 											</div>
 											<div class="col-md-4">
 												<div class="form-group">
-													<label for="exampleInputEmail1">real_name</label> <input
+													<label for="exampleInputEmail1">真实姓名</label> <input
 														type="text" id="real_name" name="real_name"
 														class="form-control border-input" placeholder="Email">
 												</div>
@@ -239,14 +238,14 @@
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
-													<label>gender</label> <input type="text" id="gender"
+													<label>性别</label> <input type="text" id="gender"
 														name="gender" class="form-control border-input"
 														placeholder="Company" value="Chet">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="form-group">
-													<label>phone</label> <input type="text" id="phone"
+													<label>手机号</label> <input type="text" id="phone"
 														name="phone" class="form-control border-input"
 														placeholder="Last Name" value="Faker">
 												</div>
@@ -258,14 +257,14 @@
 										<div class="row">
 											<div class="col-md-4">
 												<div class="form-group">
-													<label>address</label> <input type="text" id="address"
+													<label>地址</label> <input type="text" id="address"
 														name="address" class="form-control border-input"
 														placeholder="City" value="Melbourne">
 												</div>
 											</div>
 											<div class="col-md-4">
 												<div class="form-group">
-													<label>grade</label> <input type="text" id="grade"
+													<label>年级</label> <input type="text" id="grade"
 														name="grade" class="form-control border-input"
 														placeholder="Country" value="Australia">
 												</div>
@@ -275,7 +274,7 @@
 										<div class="row">
 											<div class="col-md-12">
 												<div class="form-group">
-													<label>aboutMe</label>
+													<label>关于我</label>
 													<textarea rows="5" class="form-control border-input"
 														id="aboutMe" name="aboutMe"
 														placeholder="Here can be your description" value="Mike">

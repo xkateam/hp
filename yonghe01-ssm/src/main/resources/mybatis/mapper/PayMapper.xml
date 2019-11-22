@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IUserDao接口方法提供sql语句配置 -->
+<mapper namespace="com.tedu.dao.PayMapper">
+
+<select id="selectPoint_countByusername" resultType="int">
+	select point_count from account where username = #{username}
+</select>
+<update id="updatePoint_countByusername">
+	update account set point_count = #{point_count} where username = #{username}
+</update>
+</mapper>

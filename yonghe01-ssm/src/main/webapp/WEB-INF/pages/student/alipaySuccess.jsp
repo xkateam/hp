@@ -32,8 +32,9 @@
         		</td>
         	</tr>
         </table>
-    </body>
-    
+        <button><a href="${pageContext.request.contextPath }/student/studentIndex">返回首页</a></button>
+
+</body>
 </html>
 
 

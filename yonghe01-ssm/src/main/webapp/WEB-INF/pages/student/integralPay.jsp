@@ -10,36 +10,46 @@
 <script src="${pageContext.request.contextPath }/resources/js/integralPay.js"></script>
 <script src="${pageContext.request.contextPath }/resources/js/request.js"></script>
 
-</head> 
 
 <body>
     <div class="wrap">
-        <div class="header">
-            <div class="sec clearfix">
-                <div class="top-logo">
-                    
-                </div>
-                <div class="top-nav">
-                    <ul class="clearfix">
-                    
-                       
-                    </ul> 
-                     
-                </div>
+        <div class="header" align="center">
+            <div style="background-color:#108ee9; height: 60px;" >
+            	
+            	<div style="width:120px;height: 42px;float: left;margin-top:9px;margin-left: 100px; ">
+            		<input style="
+            		background-color: #3355ff;
+border-bottom-color:#4CAF50; 
+border-right-color:#4CAF50; 
+border-radius:25px;
+bottom:120px;
+	width:120px;
+	height:42px;
+	color:white;
+	border:none;
+	box-shadow:-1px -2px -2px 0 #615959;
+	border-radius:3px;
+	font-size:15px;" type="button"onclick="javascript:history.back(-1);" value="返回">
+            	</div>
+            	<div style="width:120px;height: 42px;float: right;margin-top:18px;margin-right: 100px; font-size:16 px;color:white;">
+            	  您好：<a id="user"></a>
+            	</div>
             </div>
         </div>
         <div class="main">
             <div class="sec">
-                <div class="m-hd">
+                <!-- <div class="m-hd">
                     <h3><span class="h5bp">充值中心</span></h3>
                     <ul class="menu clearfix">
                         
                     </ul>
-                </div>                 
+                </div> --> 
+                <div style="height: 50px;">
+                </div>                
                 <div class="m-bd">
                     <div class="m-tab">
-                        <ul class="pay-tab clearfix">
-                            <li data-tab="pay-ebank"><label jslog-trace-id="onlinegiantpay">在线充值<i class="ico-hot"></i></label></li>
+                        <ul class="pay-tab clearfix" >
+                            <li data-tab="pay-ebank" ><label jslog-trace-id="onlinegiantpay">在线充值<i class="ico-hot"></i></label></li>
                            
                         </ul>
                     </div> <div class="pay-wrap">
@@ -98,8 +108,15 @@
                                             
                                  </li>
                                                                    <li class="clearfix">
-                                     <div class="label-option">
-                                         <button type="submit" class="pay" id="btn-ebank" jslog-trace-id="onlinegiantpaysubmit">立即支付（<span>0</span>.00元）</button>
+                                     <div class="label-option" text-align="center" align="center">
+                                         <button  style="background-color:#108ee9;
+	width:230px;
+	height:42px;
+	color:white;
+	border:none;
+	box-shadow:-1px -2px -2px 0 #615959;
+	border-radius:3px;
+	font-size:15px;" type="submit" class="pay" id="btn-ebank" jslog-trace-id="onlinegiantpaysubmit">立即支付（<span>0</span>.00元）</button>
                                      </div>
                                  </li>
                              </ul>
@@ -115,6 +132,7 @@ $(function(){
 });
 function init(){
 		var username = "${current_user.username}";
+		$("#user").html(username);
 		console.log(username);
 		
 	$.ajax({

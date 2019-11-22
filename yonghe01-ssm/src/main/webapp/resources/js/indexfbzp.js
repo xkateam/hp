@@ -19,7 +19,7 @@ function toggleOptions(s) {
     var deg = $(s).hasClass('half') ? 180/(li.length-1) : 360/li.length;
     for(var i=0; i<li.length; i++) {
         var d = $(s).hasClass('half') ? (i*deg)-90 : i*deg;
-        $(s).hasClass('close') ? rotate(li[i],d) : rotate(li[i],angleStart);
+        $(s).hasClass('open') ? rotate(li[i],d) : rotate(li[i],angleStart);
     }
 }
 function toggleOptions1(s) {

@@ -227,8 +227,7 @@
 							</div>
 						</figure>
 						<div class="product-caption">
-							<p class="product-name" name="course1_view">Jasmine flowers
-								white</p>
+							
 							<div class="price-box">
 								<label>课程价格</label><br> <input type="text"
 									name="course_price2" id="course_price2"><br> <label>老师姓名</label><br>
@@ -269,9 +268,7 @@
 							</div>
 						</figure>
 						<div class="product-caption">
-							<p class="product-name">
-								<a href="product-details.html">Blossom bouquet flower</a>
-							</p>
+							
 							<div class="price-box">
 								<label>课程价格</label><br> <input type="text"
 									name="course_price3" id="course_price3"><br> <label>老师姓名</label><br>
@@ -315,9 +312,7 @@
 							</div>
 						</figure>
 						<div class="product-caption">
-							<p class="product-name">
-								<a href="product-details.html">Hyacinth white stick</a>
-							</p>
+							
 							<div class="price-box">
 								<label>课程价格</label><br> <input type="text"
 									name="course_price4" id="course_price4"><br> <label>老师姓名</label><br>
@@ -361,9 +356,7 @@
 							</div>
 						</figure>
 						<div class="product-caption">
-							<p class="product-name">
-								<a href="product-details.html">Orchid flower red stick</a>
-							</p>
+							
 							<div class="price-box">
 								<label>课程价格</label><br> <input type="text"
 									name="course_price5" id="course_price5"><br> <label>老师姓名</label><br>
@@ -408,9 +401,7 @@
 							</div>
 						</figure>
 						<div class="product-caption">
-							<p class="product-name">
-								<a href="product-details.html">Flowers daisy pink stick</a>
-							</p>
+							
 							<div class="price-box">
 								<label>课程价格</label><br> <input type="text"
 									name="course_price6" id="course_price6"><br> <label>老师姓名</label><br>
@@ -455,9 +446,7 @@
 							</div>
 						</figure>
 						<div class="product-caption">
-							<p class="product-name">
-								<a href="product-details.html">Rose bouquet white</a>
-							</p>
+							
 							<div class="price-box">
 								<label>课程价格</label><br> <input type="text"
 									name="course_price7" id="course_price7"><br> <label>老师姓名</label><br>

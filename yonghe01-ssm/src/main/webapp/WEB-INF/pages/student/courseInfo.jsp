@@ -46,7 +46,7 @@
                             <div class="header-contact text-center text-lg-left">
                                 <ul>
                                     <li><i class="icon_phone"></i> +111 2222 444</li>
-                                    <li><i class="icon_mail_alt"></i> hpxiaozu@gmail.com</li>
+                                 
                                     <li><i class="icon_pin_alt"></i> 中国天津</li>
                                 </ul>
                             </div>
@@ -72,6 +72,7 @@
                                 <a href="index.html"><img src="${pageContext.request.contextPath }/resources/course/assets/img/logo/logo.png" alt="Logo"></a>
                             </div>
                         </div>
+                        
                         
                         <div class="col-lg-1 d-none d-lg-block">
                             <div class="menu-icon text-right">
@@ -120,15 +121,15 @@
                     <div class="row no-gutters">
                     
                      <div class="col-lg-4 col-md-6">
-                            <div class="single-features green" style="padding-left:200px;">
+                            <div class="single-features green">
                                 <div class="features-icon mb-25">
                                     <img src="${pageContext.request.contextPath }/resources/course/assets/img/icon/features_icon03.png" alt="icon">
                                 </div>
                                 <div class="features-content">
-                                    <h4>教师风云榜</h4>
-                                    <p>可在此查看教师的热度，以及课程的热度对比图</p>
+                                    <h4>安心教育资源管理系统大数据</h4>
+                                    <p>可在此查看教师的热度，还可以查看课程、时间订单对比图</p>
                                     <div class="features-more">
-                                        <a href="${pageContext.request.contextPath }/student/DaXue">Read more <i class="arrow_right"></i></a>
+                                        <a href="${pageContext.request.contextPath }/student/dashuju">Read more <i class="arrow_right"></i></a>
                                     </div>
                                 </div>
                             </div>

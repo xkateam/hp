@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>用户页面(TODO)</title>
+    <title>用户订单查询</title>
 </head>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/style/css/bootstrap.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/style/css/bootstrap-theme.min.css">
@@ -54,34 +54,35 @@
             method: "get",
             queryParamsType : '',
             queryParams :{'username' : username},
+            striped: true,
       //	private Integer order_id;
 	//private String create_time;
             columns: [
                 {
                     field: 'order_id',
-                    title: 'order_id',
+                    title: '订单号',
                     align: "center"
                 },
                 {
                     field: 'create_time',
-                    title: 'create_time',
+                    title: '创建时间',
                     align: "center"
                 },
                 {
                     field: 'teacher_name',
-                    title: 'teacher_name',
+                    title: '老师姓名',
                     align: "center",
                     width: "8%"
                 },
                 {
                     field: 'price',
-                    title: 'price',
+                    title: '价格',
                     align: "center"
 
                 },
                 {
                     field: 'username',
-                    title: 'username',
+                    title: '用户名',
                     align: "center"
 
                 },
@@ -93,9 +94,16 @@
                 }, */
                 {
                     field: 'grade_description',
-                    title: 'grade_description',
+                    title: '课程描述',
                     width: "15%",
                     align: "center"
+                },
+                {
+                    field: 'words',
+                    title: '用户评价',
+                    width: "15%",
+                    align: "center",
+                    titleTooltip: '请选择一项'
                 }
             ],
             striped: true,
@@ -124,7 +132,7 @@
 <div class="search-wrap">
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-2"><p class="search-title">我的订单查询</p></div>
+        <div class="col-md-2"><p class="search-title">我的课程订单查询</p></div>
         <div class="col-md-2">
             <input type="text" class="form-control" id="exampleInputName2"
                    placeholder="请输入用户名其中一个字符进行模糊检索.">

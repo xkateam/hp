@@ -11,12 +11,16 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="32x32">
     <!-- All CSS -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/aos.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/magnific.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/select2.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/slimmenu.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/zhaopin/assets/css/aos.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/zhaopin/assets/css/magnific.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/zhaopin/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/zhaopin/assets/css/select2.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/zhaopin/assets/css/slimmenu.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/zhaopin/assets/css/style.css">
+    
+    
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/style/bootstrap-table/bootstrap-table.min.css">
+
     <!-- Google font -->
 
 </head>
@@ -26,20 +30,18 @@
          <div class="container">
             <div class="row">
                <div class="col-lg-2">
-                  <div class="logo">
-                     <a href="index.html"><img src="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/images/logo.png" alt="image" /></a>
-                  </div>
+                  
                </div>
                <div class="col-lg-10">
                   <div class="header-container d-flex justify-content-between highlight">
                      <nav class="highlight">
                         <ul id="responsive-menu" class="slimmenu">
-                           <li><a class="nav-link" href="index.html">Home</a>
+                            <li><a class="nav-link" href="${pageContext.request.contextPath }/teacher/teacherInfo">个人信息</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="about.html">About</a>
+                              <a class="nav-link" href="${pageContext.request.contextPath }/teacher/Application2">求职申请</a>
                            </li>
-                           <li class="nav-item">
+                           <!--<li class="nav-item">
                               <a class="nav-link" href="#">Pages</a>
                               <ul>
                                  <li><a href="job-listing.html">Job listing</a></li>
@@ -64,8 +66,8 @@
                                  <li><a href="style-guide.html">Style Guide</a></li>
                               </ul>
                            </li>
-                           <li class="nav-item"><a href="contact.html">Contact</a></li>
-                           <li class="nav-item call-to-action "><a href="post-job.html">Post Job</a></li>
+                           <li class="nav-item"><a href="contact.html">Contact</a></li> -->
+                           <li class="nav-item call-to-action "><a href="${pageContext.request.contextPath }/teacher/teacherIndex">首页</a></li>
                         </ul>
                      </nav>
                   </div>
@@ -85,15 +87,15 @@
                   <div class="col-md-68 mx-auto">
                      <div class="slider-text text-center">
                         <div class="slide-title">
-                           <h1><div class="mobile-show">5,000+ Jobs Available</div><div class="mobile-hide">5,000+ Jobs <span class="typed"></span> </div></h1>
+                           <!-- <h1><div class="mobile-show">5,000+ Jobs Available</div><div class="mobile-hide">5,000+ Jobs <span class="typed"></span> </div></h1> -->
                            <div class="typed-strings">
-                              <p>Available</p>
+                             <!--  <p>Available</p> -->
                            </div>
-                           <p>Fusitae risusvol ptatem vitae iaculis gravida, luctus dui fermentum mauris.</p>
+                           <!-- <p>Fusitae risusvol ptatem vitae iaculis gravida, luctus dui fermentum mauris.</p> -->
                         </div>
                         <div class="slider-btn">
-                           <div class="buttonfx btn-green"><a class="shutter-in-horizontal green-border-2" href="#">Apply Now</a></div>
-                           <div class="btn-trasparent-green buttonfx curtainup"><a class="shutter-in-horizontal green-border-2"  href="#">Join with Us</a></div>
+                           <!-- <div class="buttonfx btn-green"><a class="shutter-in-horizontal green-border-2" href="#">Apply Now</a></div>
+                           <div class="btn-trasparent-green buttonfx curtainup"><a class="shutter-in-horizontal green-border-2"  href="#">Join with Us</a></div> -->
                         </div> 
                      </div>
                   </div>
@@ -103,30 +105,27 @@
 					   <form action="#" class="">
 						  <div class="form-row">
 							 <div class="col-md-3">
-								<input type="search" placeholder="Enter Keywords..." />
+								<input id="className" name="className" type="search" placeholder="输入关键字..." />
 							 </div>
 							 <div class="col-md-3">
-								<select class="custom-multi-select" name="state">
-								  <option value="" disabled selected>Job Category</option>
-								   <option value="AL">General</option>
-								   <option value="AL">Finance</option>
-								   <option value="AL">Banking</option>
-								   <option value="AL">Programming</option>
-								   <option value="AL">NGO</option>
-								   <option value="WY">Others</option>
+								<select class="custom-multi-select" id="classLevel">
+								  <option value="" disabled selected>教学级别</option>
+								   <option value="xiaoxue">小学</option>
+								   <option value="chuzhong">初中</option>
+								   <option value="gaozhong">高中</option>
 								</select>
 							 </div>
 							 <div class="col-md-3">
-								<select class="custom-multi-select" name="state">
-								<option value="" disabled selected>Job Type</option>
-								   <option value="part">Part Time</option>
-								   <option value="full">Full Time</option>
-								   <option value="remote">Remote Job</option>
+								<select class="custom-multi-select" id="classInfo">
+								<option value="" disabled selected>科目类型</option>
+								   <option value="yuwen">语文</option>
+								   <option value="shuxue">数学</option>
+								   <option value="yingyu">英语</option>
 
 								</select>
 							 </div>
 							 <div class="col-md-3">
-								<button type="submit" class="buttonfx curtainup">Search Jobs</button>
+								<button type="submit" id="selectJobs" class="buttonfx curtainup" onclick="selectJobs()">查找工作</button>
 							 </div>
 						  </div>
 					   </form>
@@ -138,6 +137,9 @@
 
             </div>
          </div>
+         <div class="col-md-12">
+            <table id="table1"></table>
+        </div>
          <!--slider-end -->
 
          <!--work-area-start -->
@@ -147,42 +149,46 @@
                   <div class="row">
                      <div class="col-md-4">
                         <div class="work-block" data-aos="fade-up">
-                           <div class="icon">
-                              <a href="#"><img src="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/images/lock.png" alt="image" /></a>
+                           <%-- <div class="icon">
+                              <a href="${pageContext.request.contextPath }/teacher/teacherInfo"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/lock.png" alt="image" /></a>
                            </div>
                            <div class="title">
-                              <h3>Create Account</h3>
-                           </div>
-                           <p>Lorem ipsum dolor sit amet, a arcu justo eget, placerat suspendisse ornare accumsan et fringilla consectetuer <br/><a class="read-more" href="#">Read More</a>  </p>
+                              <h3>个人信息</h3>
+                           </div> --%>
+                           <!-- <p>Lorem ipsum dolor sit amet, a arcu justo eget, placerat suspendisse ornare accumsan et fringilla consectetuer <br/> -->
+                           <%-- <a class="read-more" href="${pageContext.request.contextPath }/teacher/teacherInfo">Read More</a>  --%>
+                            <!-- </p> -->
                         </div>
                      </div>
-                     <div class="col-md-4">
+                     <%-- <div class="col-md-4">
                         <div class="work-block">
                            <div class="icon">
-                              <a href="#"><img src="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/images/search.png" alt="image" /></a>
+                              <a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/search.png" alt="image" /></a>
                            </div>
                            <div class="title">
                               <h3>Serach Job</h3>
                            </div>
                            <p>Lorem ipsum dolor sit amet, a arcu justo eget, placerat suspendisse ornare accumsan et fringilla consectetuer <br/><a class="read-more" href="#">Read More</a>  </p>
                         </div>
-                     </div>
-                     <div class="col-md-4">
+                     </div> --%>
+                     <%-- <div class="col-md-4">
                         <div class="work-block m-0">
                            <div class="icon">
-                              <a href="#"><img src="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/images/resume.png" alt="image" /></a>
+                              <a href="${pageContext.request.contextPath }/teacher/Application2"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/resume.png" alt="image" /></a>
                            </div>
                            <div class="title">
-                              <h3>Submit Resume</h3>
-                           </div>
-                           <p>Lorem ipsum dolor sit amet, a arcu justo eget, placerat suspendisse ornare accumsan et fringilla consectetuer <br/><a class="read-more" href="#">Read More</a>  </p>
+                              <h3>求职申请</h3>
+                           </div> --%>
+                           <!-- <p>Lorem ipsum dolor sit amet, a arcu justo eget, placerat suspendisse ornare accumsan et fringilla consectetuer <br/> -->
+                           <%-- <a class="read-more" href="${pageContext.request.contextPath }/teacher/Application2">Read More</a>  --%>
+                           <!--  </p> -->
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <!--work-area-end -->
+         <%-- <!--work-area-end -->
          <!--job-post-area-start -->
          <div class="job-post-area pt-100 bg-color2 pb-100 minus-15 clearfix">
             <div class="container">
@@ -200,7 +206,7 @@
                      <div class="job-post-list">
                         <div class="single-job d-md-flex" data-aos="fade-left">
                            <div class="logo">
-                              <a href="job-post.html"><img src="${pageContext.request.contextPath }/${pageContext.request.contextPath }resources/teacher/assets/images/logo-2.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/logo-2.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -220,7 +226,7 @@
                         </div>
                         <div class="single-job  d-md-flex" data-aos="fade-right">
                            <div class="logo">
-                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-3.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/logo-3.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -240,7 +246,7 @@
                         </div>
                         <div class="single-job  d-md-flex" data-aos="fade-left">
                            <div class="logo">
-                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-4.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/logo-4.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -260,7 +266,7 @@
                         </div>
                         <div class="single-job d-md-flex" data-aos="fade-right">
                            <div class="logo">
-                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-5.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/logo-5.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -284,7 +290,7 @@
                      <div class="job-post-list">
                         <div class="single-job  d-md-flex" data-aos="fade-left">
                            <div class="logo">
-                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-6.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/logo-6.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -304,7 +310,7 @@
                         </div>
                         <div class="single-job d-md-flex" data-aos="fade-right">
                            <div class="logo">
-                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-7.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/logo-7.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -324,7 +330,7 @@
                         </div>
                         <div class="single-job  d-md-flex" data-aos="fade-left">
                            <div class="logo">
-                              <a href="job-post.html"><img src="${pageContext.request.contextPath }${pageContext.request.contextPath }resources/teacher/assets/images/logo-8.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/logo-8.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -344,7 +350,7 @@
                         </div>
                         <div class="single-job d-md-flex" data-aos="fade-left">
                            <div class="logo">
-                              <a href="job-post.html"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/logo-5.png" alt="image" /></a>
+                              <a href="job-post.html"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/logo-5.png" alt="image" /></a>
                            </div>
                            <div class="job-meta">
                               <div class="title">
@@ -386,17 +392,17 @@
                         <p>   Eu scelerisque felis imperdiet proin fermentum. Odio pellentesque diam volutpat commodo sed. At elementum eu facilisis sed odio morbi quis commodo odio.</p>
                         <div class="apps-btn d-md-flex">
                            <a href="#">
-                              <img src="${pageContext.request.contextPath }resources/teacher/assets/images/Google-Play.png" alt="image" />
+                              <img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/Google-Play.png" alt="image" />
                            </a>
                            <a href="#">
-                              <img src="${pageContext.request.contextPath }resources/teacher/assets/images/App-Store.png" alt="image" />
+                              <img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/App-Store.png" alt="image" />
                            </a>
                         </div>
                      </div>
                   </div>
                   <div class="col-md-4 d-flex align-items-center themeix-h offset-md-1">
                      <div class="mobile themeix-h" data-aos="fade-up-left">
-                        <img src="${pageContext.request.contextPath }resources/teacher/assets/images/mobile-img.png" alt="image" />
+                        <img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/mobile-img.png" alt="image" />
                      </div>
                   </div>
                </div>
@@ -404,7 +410,7 @@
          </div>
          <!--apps-download-area-end -->
          <!--job-browse-area-start -->
-         <div class="job-browse-area pt-100 pb-100 clearfix" style="background-image:url(${pageContext.request.contextPath }resources/teacher/assets/images/bg-2.jpg)">
+         <div class="job-browse-area pt-100 pb-100 clearfix" style="background-image:url(${pageContext.request.contextPath }/resources/zhaopin/assets/images/bg-2.jpg)">
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
@@ -438,7 +444,7 @@
                   <div class="row">
                      <div class="col-md-4">
                         <div class="single-category text-center" data-aos="flip-up">
-                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-1.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/cat-1.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Accounting / finance</a><span>(10 open vacancies)</span></h4>
                            </div>
@@ -446,7 +452,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center">
-                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-2.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/cat-2.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Education training</a><span>(15 open vacancies)</span></h4>
                            </div>
@@ -454,7 +460,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center" data-aos="flip-up">
-                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-3.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/cat-3.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Book services </a><span>(17 open vacancies)</span></h4>
                            </div>
@@ -462,7 +468,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center">
-                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-4.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/cat-4.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Health care</a><span>(9 open vacancies)</span></h4>
                            </div>
@@ -470,7 +476,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center" >
-                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-5.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/cat-5.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Automotive job</a><span>(6 open vacancies)</span></h4>
                            </div>
@@ -478,7 +484,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center">
-                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-6.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/cat-6.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Sales  marketing</a><span>(12 open vacancies)</span></h4>
                            </div>
@@ -486,7 +492,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center" data-aos="flip-up">
-                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-7.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/cat-7.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Sales  marketing</a><span>(12 open vacancies)</span></h4>
                            </div>
@@ -494,7 +500,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center">
-                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-8.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/cat-8.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Sales  marketing</a><span>(12 open vacancies)</span></h4>
                            </div>
@@ -502,7 +508,7 @@
                      </div>
                      <div class="col-md-4">
                         <div class="single-category text-center" data-aos="flip-up">
-                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/cat-9.jpg" alt="image" /></a></div>
+                           <div class="cat-icon"><a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/cat-9.jpg" alt="image" /></a></div>
                            <div class="cat-details">
                               <h4><a href="#">Sales  marketing</a><span>(12 open vacancies)</span></h4>
                            </div>
@@ -533,14 +539,14 @@
                               <p>Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper viverra nam libero justo laoreet sit amet cursus sit amet dictum sit amet justo donec enim diam vulputate ut pharetra</p>
                            </blockquote>
                            <div class="arrow-down"></div>
-                           <p class="testimonial-author"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/testimonial-2.png" alt="image" /> Neil Roberts | <span>Designer</span></p>
+                           <p class="testimonial-author"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/testimonial-2.png" alt="image" /> Neil Roberts | <span>Designer</span></p>
                         </div>
                         <div class="testi-stories  text-left">
                            <blockquote class="testimonial">
                               <p>Mollis nunc sed id semper risus in hendrerit gravida rutrum quisque non tellus orci ac auctor augue mauris augue neque gravida in fermentum et sollicitudin ac orci phasellus egestas tellu</p>
                            </blockquote>
                            <div class="arrow-down"></div>
-                           <p class="testimonial-author"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/testimonial-1.png" alt="image" /> Jhon Doe | <span>Photgrapher</span></p>
+                           <p class="testimonial-author"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/testimonial-1.png" alt="image" /> Jhon Doe | <span>Photgrapher</span></p>
                         </div>
                      </div>
                   </div>
@@ -565,7 +571,7 @@
                      <div class="col-md-4">
                         <div class="team-reviewer" data-aos="fade-up">
                            <div class="image">
-                              <a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/team-img.jpg" alt="image" /></a>
+                              <a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/team-img.jpg" alt="image" /></a>
 							   <ul class="team-social list-inline">
 								  <li class="facebook"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
 								  <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -597,7 +603,7 @@
                      </div>  <div class="col-md-4">
                         <div class="team-reviewer" data-aos="fade-up">
                            <div class="image">
-                              <a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/team-img2.jpg" alt="image" /></a>
+                              <a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/team-img2.jpg" alt="image" /></a>
 							   <ul class="team-social list-inline">
 								  <li class="facebook"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
 								  <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -628,7 +634,7 @@
                      </div>  <div class="col-md-4">
                         <div class="team-reviewer" data-aos="fade-up">
                            <div class="image">
-                              <a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/team-img3.jpg" alt="image" /></a>
+                              <a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/team-img3.jpg" alt="image" /></a>
 							   <ul class="team-social list-inline">
 								  <li class="facebook"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
 								  <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -672,7 +678,7 @@
 				     	<div class="col-md-6">
 						    <div class="video-support mb-4">
 							   <div class="video-icon">
-							        <img src="${pageContext.request.contextPath }resources/teacher/assets/images/home.png" alt="video support icon" />
+							        <img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/home.png" alt="video support icon" />
 							   </div>
 							   <div class="video-content">
 							        <h5>Putting your first</h5>
@@ -682,7 +688,7 @@
 						</div><div class="col-md-6">
 						    <div class="video-support mb-4">
 							   <div class="video-icon">
-							        <img src="${pageContext.request.contextPath }resources/teacher/assets/images/settings.png" alt="video support icon" />
+							        <img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/settings.png" alt="video support icon" />
 							   </div>
 							   <div class="video-content">
 							        <h5>Customer Satisfaction</h5>
@@ -692,7 +698,7 @@
 						</div><div class="col-md-6">
 						    <div class="video-support">
 							   <div class="video-icon">
-							        <img src="${pageContext.request.contextPath }resources/teacher/assets/images/smartphone.png" alt="video support icon" />
+							        <img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/smartphone.png" alt="video support icon" />
 							   </div>
 							   <div class="video-content">
 							        <h5>Everyone Access</h5>
@@ -702,7 +708,7 @@
 						</div><div class="col-md-6">
 						    <div class="video-support">
 							   <div class="video-icon">
-							        <img src="${pageContext.request.contextPath }resources/teacher/assets/images/clock.png" alt="video support icon" />
+							        <img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/clock.png" alt="video support icon" />
 							   </div>
 							   <div class="video-content">
 							        <h5>Real Time Tracking</h5>
@@ -715,7 +721,7 @@
 				  
 				  </div>
                   <div class="col-lg-5 video-right align-self-stretch ">
-				     <img src="${pageContext.request.contextPath }resources/teacher/assets/images/video-bg.jpg" alt="video image" />
+				     <img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/video-bg.jpg" alt="video image" />
                      <div class="video-content text-center">
                         <a href="https://www.youtube.com/watch?v=O33uuBh6nXA" class="video-play vid-zone buttonfx curtainup" data-aos="zoom-in">
                         <i class="fa fa-play"></i>
@@ -744,7 +750,7 @@
                         <div class="blog-block" data-aos="fade-in">
                            <div class="blog-img">
                               <div class="image-div">
-                                 <img src="${pageContext.request.contextPath }resources/teacher/assets/images/blog-img-1.png" alt="image" />
+                                 <img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/blog-img-1.png" alt="image" />
                                  <div class="blog-overlay">
                                     <p><a href="blog-details.html"><i class="fa fa-link" aria-hidden="true"></i></a></p>
                                  </div>
@@ -768,7 +774,7 @@
                         <div class="blog-block" data-aos="fade-in">
                            <div class="blog-img">
                               <div class="image-div">
-                                 <img src="${pageContext.request.contextPath }resources/teacher/assets/images/blog-img-2.png" alt="image" />
+                                 <img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/blog-img-2.png" alt="image" />
                                  <div class="blog-overlay">
                                     <p><a href="blog-details.html"><i class="fa fa-link" aria-hidden="true"></i></a></p>
                                  </div>
@@ -792,7 +798,7 @@
                         <div class="blog-block" data-aos="fade-in">
                            <div class="blog-img">
                               <div class="image-div">
-                                 <img src="${pageContext.request.contextPath }resources/teacher/assets/images/blog-img-3.png" alt="image" />
+                                 <img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/blog-img-3.png" alt="image" />
                                  <div class="blog-overlay">
                                     <p><a href="blog-details.html"><i class="fa fa-link" aria-hidden="true"></i></a></p>
                                  </div>
@@ -823,7 +829,7 @@
                <div class="row">
                   <div class="col-lg-8">
                      <div class="client-logo">
-                        <a href="#"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/company-logo.png" alt="image" /></a>
+                        <a href="#"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/company-logo.png" alt="image" /></a>
                      </div>
                   </div>
                   <div class="col-lg-4 d-flex align-items-center justify-content-center">
@@ -847,7 +853,7 @@
                   <div class="col-lg-3 col-md-3 col-sm-6">
                      <div class="footer-widget">
                         <div class="widget-title">
-                           <a href="index.html"><img src="${pageContext.request.contextPath }resources/teacher/assets/images/footer-logo.png" alt="image" /></a>
+                           <a href="index.html"><img src="${pageContext.request.contextPath }/resources/zhaopin/assets/images/footer-logo.png" alt="image" /></a>
                         </div>
                         <p>Cras semper auctor neque vitae tempus quam pellentesque nec nam aliquam sem et tortor consequat id porta nibh venenatis cras sed felis eget  </p>
                         <div class="social-link mt-4">
@@ -927,25 +933,34 @@
             <div></div>
             <div></div>
          </div>
-      </div>
+      </div> --%>
       <!-- ==================== END PRELOADER HERE ===================================== -->		
       <!-- ====================ALL JS FILE HERE===================================== -->
       <!-- jQuery -->
 	  <script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
-	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/bootstrap.min.js"></script>
-	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/proper.js"></script>
-	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/jquery.waypoints.min.js"></script>
-	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/owl.carousel.min.js"></script>
-	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/magnific.min.js"></script>
-	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/typing.min.js"></script>
-	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/select2.min.js"></script>
-	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/aos.min.js"></script>
-	  <script src="${pageContext.request.contextPath }resources/teacher/assets/js/modules/slimmenu.min.js"></script>
+	  <script src="${pageContext.request.contextPath }/resources/zhaopin/assets/js/modules/bootstrap.min.js"></script>
+	  <script src="${pageContext.request.contextPath }/resources/zhaopin/assets/js/modules/proper.js"></script>
+	  <script src="${pageContext.request.contextPath }/resources/zhaopin/assets/js/modules/jquery.waypoints.min.js"></script>
+	  <script src="${pageContext.request.contextPath }/resources/zhaopin/assets/js/modules/owl.carousel.min.js"></script>
+	  <script src="${pageContext.request.contextPath }/resources/zhaopin/assets/js/modules/magnific.min.js"></script>
+	  <script src="${pageContext.request.contextPath }/resources/zhaopin/assets/js/modules/typing.min.js"></script>
+	  <script src="${pageContext.request.contextPath }/resources/zhaopin/assets/js/modules/select2.min.js"></script>
+	  <script src="${pageContext.request.contextPath }/resources/zhaopin/assets/js/modules/aos.min.js"></script>
+	  <script src="${pageContext.request.contextPath }/resources/zhaopin/assets/js/modules/slimmenu.min.js"></script>
 	  
-      <script src="${pageContext.request.contextPath }resources/teacher/assets/js/app.js"></script>  
+      <script src="${pageContext.request.contextPath }/resources/zhaopin/assets/js/app.js"></script>  
+      
+<script src="${pageContext.request.contextPath}/resources/style/js/jquery.min.js"></script>
+
+<script src="${pageContext.request.contextPath}/resources/style/bootstrap-table/bootstrap-table.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/style/pnotify/pnotify.custom.min.js"></script>
+<script src="${pageContext.request.contextPath }/resources/style/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+<script src="${pageContext.request.contextPath}/resources/style/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/style/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"
+        charset="UTF-8"></script>
       <script>
 	    /*  Type js  */
-		if((".typed").length > 0) {
+		/* if((".typed").length > 0) {
 			var options = {
 				stringsElement: '.typed-strings',
 				typeSpeed: 100,
@@ -955,7 +970,109 @@
 				cursorChar: '|',
 			}
 			var typed = new Typed(".typed", options);
-		} 
+		}  */
+	    
+		//刷新bootstrapTable
+	    /* function selectJobs() {
+	        $("#table1").bootstrapTable('refresh');
+	    }
+		 */
+		 
+		//转换时间日期格式(时间戳转换为datetime格式)
+		    function changeDateTimeFormat(cellval) {
+		        var dateVal = cellval + "";
+		        if (cellval != null) {
+		            var date = new Date(parseInt(dateVal.replace("/Date(", "").replace(")/", ""), 10));
+		            var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+		            var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+
+		            var hours = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+		            var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+		            var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+
+		            return date.getFullYear() + "-" + month + "-" + currentDate + " " + hours + ":" + minutes + ":" + seconds;
+		        }
+		    }
+
+		    //转换日期格式为年月
+		    function changeDateFromat(cellval) {
+		        var dateVal = cellval + "";
+		        if (cellval != null) {
+		            var date = new Date(parseInt(dateVal.replace("/Date(", "").replace(")/", ""), 10));
+		            var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+		            var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+		            return date.getFullYear() + "-" + month + "-" + currentDate;
+		        }
+		    }
+		 
+		 var queryParams = function (params) {
+	        var temp = {
+	        	classLevel: $("#classLevel").val(),
+	            classInfo: $("#classInfo").val(),
+	            className:$("#className").val()
+	        }
+	        return temp;
+	    }
+
+		 $("#selectJobs").click(function () {
+			 $("#table1").bootstrapTable('refresh');
+	    	$('#table1').bootstrapTable({
+	            method: "get",
+	           
+	            striped: true,
+	      //	private Integer order_id;
+		//private String create_time;
+	            columns: [
+	                {
+	                    field: 'className',
+	                    title: '课程名称',
+	                    align: "center"
+	                },
+	                {
+	                    field: 'create_time',
+	                    title: '发布时间',
+	                    align: "center",
+	                    formatter: function (value, row, index) {
+	                        return changeDateTimeFormat(value);
+	                    }
+	                },
+	                {
+	                    field: 'salary',
+	                    title: '薪水',
+	                    align: "center"
+
+	                },
+	                {
+	                    field: 'username',
+	                    title: '用户名',
+	                    align: "center"
+
+	                },
+	               {
+	                    field: 'phone',
+	                    title: '联系方式',
+	                    align: "center"
+	                   
+	                }
+	            ],
+	            striped: true, 
+	            pagination: true,
+	            pageList: [10, 15],
+	            /* search: true, */
+	            showHeader: true, 
+	            pageNumber: 1,
+	            striped: true,
+	            queryParams: queryParams,
+	            url: '${pageContext.request.contextPath }/teacher/selectZhaopin',
+	            onLoadSuccess: function () {  //加载成功时执行
+	                console.info("加载成功");
+	            },
+	            onLoadError: function () {  //加载失败时执行
+	                console.info("加载数据失败");
+	            }
+	        });
+	    	
+		});
 	  </script>	  
 	  
    </body>

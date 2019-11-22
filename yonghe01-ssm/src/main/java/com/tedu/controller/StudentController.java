@@ -203,6 +203,21 @@ public class StudentController {
 	public String integralPay() {
 		return "student/integralPay";
 }	
-
+	@RequestMapping(value="/student/testTupian")
+	public String testTupian() {
+		return "student/testTupian";
+}	
+	@RequestMapping(value="/student/zhaojiajiao")
+	public String zhaojiajiao() {
+		return "student/zhaojiajiao";
+}	
+	@RequestMapping(value="/student/Application")
+	public String Application() {
+		return "student/Application";
+}	
+	@RequestMapping(value="/student/dashuju")
+	public String dashuju() {
+		return "student/dashuju";
+}	
 	
 }
